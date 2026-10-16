@@ -1,0 +1,1110 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-16T02:00:09+00:00",
+  "purpose": "Compute, memory, and one-bin causal latency audit of existing selected HDC/random/MLP/plain models; no retraining.",
+  "selection": {
+    "selection_source": "hdc_study/results/transfer_selection.json; pooled mean of the six inner validation group selections",
+    "representative_checkpoint_rule": "Existing trained transfer checkpoint, training seed 101, fitted on all six held-in groups; codebook_seed=100000+seed=100101",
+    "selection_file_sha256": "b6572304a225bc9e08ac8e34926367c155314149276394646cf3d72acbd4e1f6",
+    "checkpoints": {
+      "hdc": {
+        "family": "hdc",
+        "selected_key": "hdc_d512_k1_lr0.0002",
+        "inner_selected_mean_score": 0.3945544010400772,
+        "checkpoint": "hdc_study/checkpoints/transfer_hdc_s101.pt",
+        "checkpoint_sha256": "0e82008235d5db8f6ed76efd3f50c355d39807e8c601eb219da3a2aeb6c14c6f",
+        "checkpoint_bytes": 6776295,
+        "parameters": 248199,
+        "training_seed": 101,
+        "codebook_seed": 100101,
+        "train_days": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "training_file_count": 13,
+        "config": {
+          "family": "hdc",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 512,
+          "temporal_bins": 1,
+          "levels": 8,
+          "codebook_seed": 100101,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "dropout": 0.2,
+          "epochs": 50,
+          "lr": 0.0002,
+          "weight_decay": 0.0001,
+          "window": 256,
+          "stride": 64,
+          "batch": 256,
+          "amp": false,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "transfer_run_record_sha256": "9aa98970e86ae306fdaa46fd4857763d022d5eb9194de714b4ad3e4c1572d6a8"
+      },
+      "random": {
+        "family": "random",
+        "selected_key": "random_d512_k1_lr0.0002",
+        "inner_selected_mean_score": 0.3632747608423233,
+        "checkpoint": "hdc_study/checkpoints/transfer_random_s101.pt",
+        "checkpoint_sha256": "48ad547b6f097a3edb66a66009e3319c4f930b28ca90bdca231599c8287c48a6",
+        "checkpoint_bytes": 6776352,
+        "parameters": 248199,
+        "training_seed": 101,
+        "codebook_seed": 100101,
+        "train_days": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "training_file_count": 13,
+        "config": {
+          "family": "random",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 512,
+          "temporal_bins": 1,
+          "levels": 8,
+          "codebook_seed": 100101,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "dropout": 0.2,
+          "epochs": 50,
+          "lr": 0.0002,
+          "weight_decay": 0.0001,
+          "window": 256,
+          "stride": 64,
+          "batch": 256,
+          "amp": false,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "transfer_run_record_sha256": "32ccb0bb72df8f4a89d65334b796fd818c49b2ddd93efa12ceb9770e8c813990"
+      },
+      "mlp": {
+        "family": "mlp",
+        "selected_key": "mlp_d512_k8_lr0.0002",
+        "inner_selected_mean_score": 0.5344707403580348,
+        "checkpoint": "hdc_study/checkpoints/transfer_mlp_s101.pt",
+        "checkpoint_sha256": "d2ec288c09abda27a0a41ccace6d730fd66865c4de590deb778c23eabcb80f04",
+        "checkpoint_bytes": 1036199,
+        "parameters": 247772,
+        "training_seed": 101,
+        "codebook_seed": 100101,
+        "train_days": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "training_file_count": 13,
+        "config": {
+          "family": "mlp",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 512,
+          "temporal_bins": 8,
+          "levels": 8,
+          "codebook_seed": 100101,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "dropout": 0.2,
+          "epochs": 50,
+          "lr": 0.0002,
+          "weight_decay": 0.0001,
+          "window": 256,
+          "stride": 64,
+          "batch": 256,
+          "amp": false,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "transfer_run_record_sha256": "34a63c932a5d8fd4428e938aeab4f68d90b412b83dda111dbcde2463ed424c26"
+      },
+      "plain": {
+        "family": "plain",
+        "selected_key": "plain_d256_k1_lr0.0008",
+        "inner_selected_mean_score": 0.615543500383695,
+        "checkpoint": "hdc_study/checkpoints/transfer_plain_s101.pt",
+        "checkpoint_sha256": "acbe07c16911e99a3583e52b809aa9739729e014cf4f5278ba02ff74bbcf2dc6",
+        "checkpoint_bytes": 572283,
+        "parameters": 139655,
+        "training_seed": 101,
+        "codebook_seed": 100101,
+        "train_days": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "training_file_count": 13,
+        "config": {
+          "family": "plain",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 256,
+          "temporal_bins": 1,
+          "levels": 8,
+          "codebook_seed": 100101,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "dropout": 0.2,
+          "epochs": 50,
+          "lr": 0.0008,
+          "weight_decay": 0.0001,
+          "window": 256,
+          "stride": 64,
+          "batch": 256,
+          "amp": false,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "transfer_run_record_sha256": "e375330a9f121f0395f98e80110168582362f380d61d60651ffb38ae3d232a1a"
+      }
+    }
+  },
+  "measurement": {
+    "command": ".venv/bin/python hdc_study/efficiency.py",
+    "batch_size": 1,
+    "bins_per_predict_call": 1,
+    "nominal_bin_rate_hz": 50,
+    "nominal_deadline_ms": 20.0,
+    "warmup_steps": 100,
+    "measured_steps": 1000,
+    "model_forward_includes_normalization": false,
+    "adapter_predict_includes": [
+      "finite-value check",
+      "host online moments and smoothing",
+      "host-to-device transfer where applicable",
+      "strict-FP32 model forward",
+      "prediction transfer and target unnormalization"
+    ],
+    "adapter_predict_excludes": [
+      "file I/O",
+      "data loading",
+      "calibration fitting",
+      "trial scheduling"
+    ],
+    "inputs": {
+      "cache": "hdc_study/cache/sub-HumanPitt-held-out-calib_ses-19250126T113454.npz",
+      "sha256": "da19ca65f7988b181a4cc2269e9538c00252802cfb915ec1321e051031fe3158",
+      "held_out_input_bins": 2376,
+      "input_shape": [
+        2376,
+        176
+      ],
+      "fields_loaded": [
+        "x"
+      ],
+      "labels_loaded_or_used": false,
+      "first_measured_recording": "falcon-challenge/data/000954/sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250126T113454.nwb"
+    },
+    "cpu": {
+      "model": "Intel(R) Core(TM) i9-14900HX",
+      "logical_cpus": 32,
+      "torch_threads": 4,
+      "torch_interop_threads": 24,
+      "python": "3.10.20",
+      "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39"
+    },
+    "torch_version": "2.5.1+cu124",
+    "cuda_available_and_kernel_smoke_tested": true,
+    "cuda_version": "12.4",
+    "gpu_name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "gpu_driver_snapshot_before_benchmark": {
+      "query": "NVIDIA GeForce RTX 4080 Laptop GPU, 0, 241, 12282"
+    },
+    "inference_precision": "FP32; TF32 disabled in model forward, autocast disabled",
+    "gpu_model_forward_clock": "CUDA events with synchronization every 100 samples and at end",
+    "gpu_adapter_clock": "perf_counter_ns around complete predict, synchronized after each returned output",
+    "latency_note": "Single process, batch one, sequential causal stream; p50/p95 are empirical timing quantiles and do not establish hard real-time behavior."
+  },
+  "families": {
+    "hdc": {
+      "selected_checkpoint": {
+        "family": "hdc",
+        "selected_key": "hdc_d512_k1_lr0.0002",
+        "inner_selected_mean_score": 0.3945544010400772,
+        "checkpoint": "hdc_study/checkpoints/transfer_hdc_s101.pt",
+        "checkpoint_sha256": "0e82008235d5db8f6ed76efd3f50c355d39807e8c601eb219da3a2aeb6c14c6f",
+        "checkpoint_bytes": 6776295,
+        "parameters": 248199,
+        "training_seed": 101,
+        "codebook_seed": 100101,
+        "train_days": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "training_file_count": 13,
+        "config": {
+          "family": "hdc",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 512,
+          "temporal_bins": 1,
+          "levels": 8,
+          "codebook_seed": 100101,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "dropout": 0.2,
+          "epochs": 50,
+          "lr": 0.0002,
+          "weight_decay": 0.0001,
+          "window": 256,
+          "stride": 64,
+          "batch": 256,
+          "amp": false,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "transfer_run_record_sha256": "9aa98970e86ae306fdaa46fd4857763d022d5eb9194de714b4ad3e4c1572d6a8"
+      },
+      "memory": {
+        "parameter_count": 248199,
+        "parameter_bytes_fp32": 992796,
+        "buffer_count": 1442824,
+        "buffers_bytes": {
+          "codebook_basis": 5767168,
+          "temporal_roles": 4096,
+          "anchors_other": 32
+        },
+        "total_buffer_bytes": 5771296,
+        "resident_parameter_plus_buffer_bytes": 6764092,
+        "resident_parameter_plus_buffer_mib": 6.450740814208984
+      },
+      "operations_per_bin": {
+        "projection_layer_dimensions_in_out": {
+          "hypervector_to_hidden": {
+            "input": 1024,
+            "output": 128,
+            "macs": 131072
+          }
+        },
+        "fixed_encoder_dense_gemm_macs": 1441792,
+        "projection_macs": 131072,
+        "gru_input_affine_macs": 49152,
+        "gru_recurrent_affine_macs": 49152,
+        "readout_linear_macs": 17280,
+        "projection_plus_gru_plus_readout_macs": 246656,
+        "total_dense_macs_per_bin": 1688448,
+        "interpolation_elementwise": {
+          "input_tanh": 176,
+          "input_adds_before_grid": 176,
+          "input_multiplies_before_grid": 352,
+          "grid_subtract_abs_subtract_relu": 5632,
+          "dense_candidate_weights": 1408,
+          "note": "Exact source-level scalar counts for basis_weights; tensor reshape/GEMM excluded."
+        },
+        "role_binding_elementwise": {
+          "complex_real_multiplications": 2048,
+          "complex_add_subtracts_including_zero_accumulator": 2048,
+          "output_divisions_by_sqrt_k": 1024,
+          "temporal_bins": 1,
+          "note": "For K=1. Neural-level nonlinearities, LayerNorm, GELU, GRU gate elementwise operations and tensor movement are additional and excluded from MAC totals."
+        },
+        "excluded_from_mac_total": [
+          "normalization, tanh and triangular interpolation arithmetic",
+          "complex temporal role binding and accumulation",
+          "LayerNorm reductions/affine operations, GELU, GRU sigmoid/tanh and gates",
+          "bias additions, history concatenation/slicing, memory movement, API dispatch"
+        ],
+        "mac_definition": "One multiply-accumulate is counted as one MAC; bias and non-GEMM elementwise operations are separate."
+      },
+      "latency": {
+        "cpu": {
+          "adapter_predict": {
+            "p50_ms": 1.282344,
+            "p95_ms": 2.80854905,
+            "mean_ms": 1.602384679,
+            "min_ms": 1.041758,
+            "max_ms": 3.472053,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.7215655000000001,
+            "p95_ms": 0.8645139,
+            "mean_ms": 0.765105194,
+            "min_ms": 0.65214,
+            "max_ms": 1.978063,
+            "samples": 1000,
+            "clock": "perf_counter_ns around model.forward; input tensor prepared"
+          },
+          "normalization_only": {
+            "p50_ms": 0.058109,
+            "p95_ms": 0.06624204999999997,
+            "mean_ms": 0.059519637,
+            "min_ms": 0.056294,
+            "max_ms": 0.197315,
+            "samples": 1000
+          }
+        },
+        "gpu": {
+          "adapter_predict": {
+            "p50_ms": 1.638034,
+            "p95_ms": 3.00478425,
+            "mean_ms": 1.9661382920000001,
+            "min_ms": 1.333994,
+            "max_ms": 3.705578,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.9838399887084961,
+            "p95_ms": 1.174566400051117,
+            "mean_ms": 1.0155790392756463,
+            "min_ms": 0.8560640215873718,
+            "max_ms": 2.451456069946289,
+            "samples": 1000,
+            "clock": "CUDA events around model.forward; device input already prepared"
+          },
+          "normalization_only_host_cpu": {
+            "p50_ms": 0.058109,
+            "p95_ms": 0.06624204999999997,
+            "mean_ms": 0.059519637,
+            "min_ms": 0.056294,
+            "max_ms": 0.197315,
+            "samples": 1000
+          }
+        }
+      }
+    },
+    "random": {
+      "selected_checkpoint": {
+        "family": "random",
+        "selected_key": "random_d512_k1_lr0.0002",
+        "inner_selected_mean_score": 0.3632747608423233,
+        "checkpoint": "hdc_study/checkpoints/transfer_random_s101.pt",
+        "checkpoint_sha256": "48ad547b6f097a3edb66a66009e3319c4f930b28ca90bdca231599c8287c48a6",
+        "checkpoint_bytes": 6776352,
+        "parameters": 248199,
+        "training_seed": 101,
+        "codebook_seed": 100101,
+        "train_days": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "training_file_count": 13,
+        "config": {
+          "family": "random",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 512,
+          "temporal_bins": 1,
+          "levels": 8,
+          "codebook_seed": 100101,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "dropout": 0.2,
+          "epochs": 50,
+          "lr": 0.0002,
+          "weight_decay": 0.0001,
+          "window": 256,
+          "stride": 64,
+          "batch": 256,
+          "amp": false,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "transfer_run_record_sha256": "32ccb0bb72df8f4a89d65334b796fd818c49b2ddd93efa12ceb9770e8c813990"
+      },
+      "memory": {
+        "parameter_count": 248199,
+        "parameter_bytes_fp32": 992796,
+        "buffer_count": 1442824,
+        "buffers_bytes": {
+          "codebook_basis": 5767168,
+          "temporal_roles": 4096,
+          "anchors_other": 32
+        },
+        "total_buffer_bytes": 5771296,
+        "resident_parameter_plus_buffer_bytes": 6764092,
+        "resident_parameter_plus_buffer_mib": 6.450740814208984
+      },
+      "operations_per_bin": {
+        "projection_layer_dimensions_in_out": {
+          "hypervector_to_hidden": {
+            "input": 1024,
+            "output": 128,
+            "macs": 131072
+          }
+        },
+        "fixed_encoder_dense_gemm_macs": 1441792,
+        "projection_macs": 131072,
+        "gru_input_affine_macs": 49152,
+        "gru_recurrent_affine_macs": 49152,
+        "readout_linear_macs": 17280,
+        "projection_plus_gru_plus_readout_macs": 246656,
+        "total_dense_macs_per_bin": 1688448,
+        "interpolation_elementwise": {
+          "input_tanh": 176,
+          "input_adds_before_grid": 176,
+          "input_multiplies_before_grid": 352,
+          "grid_subtract_abs_subtract_relu": 5632,
+          "dense_candidate_weights": 1408,
+          "note": "Exact source-level scalar counts for basis_weights; tensor reshape/GEMM excluded."
+        },
+        "role_binding_elementwise": {
+          "complex_real_multiplications": 2048,
+          "complex_add_subtracts_including_zero_accumulator": 2048,
+          "output_divisions_by_sqrt_k": 1024,
+          "temporal_bins": 1,
+          "note": "For K=1. Neural-level nonlinearities, LayerNorm, GELU, GRU gate elementwise operations and tensor movement are additional and excluded from MAC totals."
+        },
+        "excluded_from_mac_total": [
+          "normalization, tanh and triangular interpolation arithmetic",
+          "complex temporal role binding and accumulation",
+          "LayerNorm reductions/affine operations, GELU, GRU sigmoid/tanh and gates",
+          "bias additions, history concatenation/slicing, memory movement, API dispatch"
+        ],
+        "mac_definition": "One multiply-accumulate is counted as one MAC; bias and non-GEMM elementwise operations are separate."
+      },
+      "latency": {
+        "cpu": {
+          "adapter_predict": {
+            "p50_ms": 1.5722105000000002,
+            "p95_ms": 2.80165065,
+            "mean_ms": 1.8374253020000002,
+            "min_ms": 1.009969,
+            "max_ms": 3.23161,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.8210189999999999,
+            "p95_ms": 1.5815301,
+            "mean_ms": 0.940862702,
+            "min_ms": 0.650038,
+            "max_ms": 2.163463,
+            "samples": 1000,
+            "clock": "perf_counter_ns around model.forward; input tensor prepared"
+          },
+          "normalization_only": {
+            "p50_ms": 0.124861,
+            "p95_ms": 0.13930845,
+            "mean_ms": 0.108671358,
+            "min_ms": 0.061584,
+            "max_ms": 0.371994,
+            "samples": 1000
+          }
+        },
+        "gpu": {
+          "adapter_predict": {
+            "p50_ms": 1.499287,
+            "p95_ms": 2.90189965,
+            "mean_ms": 1.7628139699999996,
+            "min_ms": 1.33178,
+            "max_ms": 3.770275,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 2.234463930130005,
+            "p95_ms": 2.519131302833557,
+            "mean_ms": 1.8567076157331466,
+            "min_ms": 0.9215999841690063,
+            "max_ms": 3.608544111251831,
+            "samples": 1000,
+            "clock": "CUDA events around model.forward; device input already prepared"
+          },
+          "normalization_only_host_cpu": {
+            "p50_ms": 0.124861,
+            "p95_ms": 0.13930845,
+            "mean_ms": 0.108671358,
+            "min_ms": 0.061584,
+            "max_ms": 0.371994,
+            "samples": 1000
+          }
+        }
+      }
+    },
+    "mlp": {
+      "selected_checkpoint": {
+        "family": "mlp",
+        "selected_key": "mlp_d512_k8_lr0.0002",
+        "inner_selected_mean_score": 0.5344707403580348,
+        "checkpoint": "hdc_study/checkpoints/transfer_mlp_s101.pt",
+        "checkpoint_sha256": "d2ec288c09abda27a0a41ccace6d730fd66865c4de590deb778c23eabcb80f04",
+        "checkpoint_bytes": 1036199,
+        "parameters": 247772,
+        "training_seed": 101,
+        "codebook_seed": 100101,
+        "train_days": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "training_file_count": 13,
+        "config": {
+          "family": "mlp",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 512,
+          "temporal_bins": 8,
+          "levels": 8,
+          "codebook_seed": 100101,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "dropout": 0.2,
+          "epochs": 50,
+          "lr": 0.0002,
+          "weight_decay": 0.0001,
+          "window": 256,
+          "stride": 64,
+          "batch": 256,
+          "amp": false,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "transfer_run_record_sha256": "34a63c932a5d8fd4428e938aeab4f68d90b412b83dda111dbcde2463ed424c26"
+      },
+      "memory": {
+        "parameter_count": 247772,
+        "parameter_bytes_fp32": 991088,
+        "buffer_count": 8192,
+        "buffers_bytes": {
+          "codebook_basis": 0,
+          "temporal_roles": 32768,
+          "anchors_other": 0
+        },
+        "total_buffer_bytes": 32768,
+        "resident_parameter_plus_buffer_bytes": 1023856,
+        "resident_parameter_plus_buffer_mib": 0.9764251708984375
+      },
+      "operations_per_bin": {
+        "projection_layer_dimensions_in_out": {
+          "raw_lag_to_mlp": {
+            "input": 1408,
+            "output": 85,
+            "macs": 119680
+          },
+          "mlp_to_hidden": {
+            "input": 85,
+            "output": 128,
+            "macs": 10880
+          }
+        },
+        "fixed_encoder_dense_gemm_macs": 0,
+        "projection_macs": 130560,
+        "gru_input_affine_macs": 49152,
+        "gru_recurrent_affine_macs": 49152,
+        "readout_linear_macs": 17280,
+        "projection_plus_gru_plus_readout_macs": 246144,
+        "total_dense_macs_per_bin": 246144,
+        "interpolation_elementwise": null,
+        "role_binding_elementwise": null,
+        "excluded_from_mac_total": [
+          "normalization, tanh and triangular interpolation arithmetic",
+          "complex temporal role binding and accumulation",
+          "LayerNorm reductions/affine operations, GELU, GRU sigmoid/tanh and gates",
+          "bias additions, history concatenation/slicing, memory movement, API dispatch"
+        ],
+        "mac_definition": "One multiply-accumulate is counted as one MAC; bias and non-GEMM elementwise operations are separate."
+      },
+      "latency": {
+        "cpu": {
+          "adapter_predict": {
+            "p50_ms": 0.6885405,
+            "p95_ms": 1.53474505,
+            "mean_ms": 0.837157884,
+            "min_ms": 0.620879,
+            "max_ms": 2.13615,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.4796285,
+            "p95_ms": 1.11495485,
+            "mean_ms": 0.5766649620000001,
+            "min_ms": 0.386397,
+            "max_ms": 1.777201,
+            "samples": 1000,
+            "clock": "perf_counter_ns around model.forward; input tensor prepared"
+          },
+          "normalization_only": {
+            "p50_ms": 0.0576185,
+            "p95_ms": 0.07118649999999999,
+            "mean_ms": 0.060445162000000004,
+            "min_ms": 0.055938,
+            "max_ms": 0.352556,
+            "samples": 1000
+          }
+        },
+        "gpu": {
+          "adapter_predict": {
+            "p50_ms": 1.075881,
+            "p95_ms": 2.0945420500000003,
+            "mean_ms": 1.249532457,
+            "min_ms": 0.896622,
+            "max_ms": 2.486206,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.6113120019435883,
+            "p95_ms": 1.4380512535572052,
+            "mean_ms": 0.7216803848743438,
+            "min_ms": 0.31033599376678467,
+            "max_ms": 2.056191921234131,
+            "samples": 1000,
+            "clock": "CUDA events around model.forward; device input already prepared"
+          },
+          "normalization_only_host_cpu": {
+            "p50_ms": 0.0576185,
+            "p95_ms": 0.07118649999999999,
+            "mean_ms": 0.060445162000000004,
+            "min_ms": 0.055938,
+            "max_ms": 0.352556,
+            "samples": 1000
+          }
+        }
+      }
+    },
+    "plain": {
+      "selected_checkpoint": {
+        "family": "plain",
+        "selected_key": "plain_d256_k1_lr0.0008",
+        "inner_selected_mean_score": 0.615543500383695,
+        "checkpoint": "hdc_study/checkpoints/transfer_plain_s101.pt",
+        "checkpoint_sha256": "acbe07c16911e99a3583e52b809aa9739729e014cf4f5278ba02ff74bbcf2dc6",
+        "checkpoint_bytes": 572283,
+        "parameters": 139655,
+        "training_seed": 101,
+        "codebook_seed": 100101,
+        "train_days": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "training_file_count": 13,
+        "config": {
+          "family": "plain",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 256,
+          "temporal_bins": 1,
+          "levels": 8,
+          "codebook_seed": 100101,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "dropout": 0.2,
+          "epochs": 50,
+          "lr": 0.0008,
+          "weight_decay": 0.0001,
+          "window": 256,
+          "stride": 64,
+          "batch": 256,
+          "amp": false,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "transfer_run_record_sha256": "e375330a9f121f0395f98e80110168582362f380d61d60651ffb38ae3d232a1a"
+      },
+      "memory": {
+        "parameter_count": 139655,
+        "parameter_bytes_fp32": 558620,
+        "buffer_count": 512,
+        "buffers_bytes": {
+          "codebook_basis": 0,
+          "temporal_roles": 2048,
+          "anchors_other": 0
+        },
+        "total_buffer_bytes": 2048,
+        "resident_parameter_plus_buffer_bytes": 560668,
+        "resident_parameter_plus_buffer_mib": 0.5346946716308594
+      },
+      "operations_per_bin": {
+        "projection_layer_dimensions_in_out": {
+          "raw_lag_to_hidden": {
+            "input": 176,
+            "output": 128,
+            "macs": 22528
+          }
+        },
+        "fixed_encoder_dense_gemm_macs": 0,
+        "projection_macs": 22528,
+        "gru_input_affine_macs": 49152,
+        "gru_recurrent_affine_macs": 49152,
+        "readout_linear_macs": 17280,
+        "projection_plus_gru_plus_readout_macs": 138112,
+        "total_dense_macs_per_bin": 138112,
+        "interpolation_elementwise": null,
+        "role_binding_elementwise": null,
+        "excluded_from_mac_total": [
+          "normalization, tanh and triangular interpolation arithmetic",
+          "complex temporal role binding and accumulation",
+          "LayerNorm reductions/affine operations, GELU, GRU sigmoid/tanh and gates",
+          "bias additions, history concatenation/slicing, memory movement, API dispatch"
+        ],
+        "mac_definition": "One multiply-accumulate is counted as one MAC; bias and non-GEMM elementwise operations are separate."
+      },
+      "latency": {
+        "cpu": {
+          "adapter_predict": {
+            "p50_ms": 0.7180424999999999,
+            "p95_ms": 1.4485409999999999,
+            "mean_ms": 0.888106661,
+            "min_ms": 0.523588,
+            "max_ms": 1.846589,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.413149,
+            "p95_ms": 0.96032775,
+            "mean_ms": 0.550343803,
+            "min_ms": 0.293364,
+            "max_ms": 1.447286,
+            "samples": 1000,
+            "clock": "perf_counter_ns around model.forward; input tensor prepared"
+          },
+          "normalization_only": {
+            "p50_ms": 0.057596,
+            "p95_ms": 0.13639895,
+            "mean_ms": 0.06536909299999999,
+            "min_ms": 0.055756,
+            "max_ms": 0.30432,
+            "samples": 1000
+          }
+        },
+        "gpu": {
+          "adapter_predict": {
+            "p50_ms": 0.9017395,
+            "p95_ms": 1.0199068,
+            "mean_ms": 0.9105770710000001,
+            "min_ms": 0.79608,
+            "max_ms": 1.340025,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.52019202709198,
+            "p95_ms": 0.588769605755806,
+            "mean_ms": 0.5781345300376415,
+            "min_ms": 0.12902399897575378,
+            "max_ms": 55.907169342041016,
+            "samples": 1000,
+            "clock": "CUDA events around model.forward; device input already prepared"
+          },
+          "normalization_only_host_cpu": {
+            "p50_ms": 0.057596,
+            "p95_ms": 0.13639895,
+            "mean_ms": 0.06536909299999999,
+            "min_ms": 0.055756,
+            "max_ms": 0.30432,
+            "samples": 1000
+          }
+        }
+      }
+    }
+  },
+  "fused_variants": {
+    "hdc": {
+      "variant": "FP32 offline fused basis/temporal rotation/input projection plus exact two-anchor sparse interpolation",
+      "training_or_primary_results_changed": false,
+      "operations_per_bin": {
+        "fixed_encoder_dense_gemm_macs": 0,
+        "sparse_lookup_mac_equivalent": 45056,
+        "gru_plus_readout_macs": 115584,
+        "total_online_mac_equivalents": 160640,
+        "original_dense_online_macs": 1688448,
+        "online_mac_equivalents_saved_per_bin": 1527808,
+        "one_time_offline_fusion_gemm_macs": 184549376,
+        "arithmetic_only_amortization_bins": 121,
+        "arithmetic_only_amortization_seconds_at_50hz": 2.42,
+        "sparse_lookup_scalar_multiplications": 45056,
+        "sparse_lookup_scalar_additions": 44928,
+        "note": "Sparse lookup count treats each of two weighted anchors per channel as one MAC-equivalent; table construction is one-time and excluded from per-bin counts."
+      },
+      "compiled_memory": {
+        "original_checkpoint_parameter_count": 248199,
+        "compiled_retained_trained_parameter_values": 116999,
+        "compiled_fused_table_values": 180224,
+        "compiled_fused_table_bytes_fp32": 720896,
+        "compiled_bias_buffer_bytes_fp32": 512,
+        "compiled_other_runtime_buffer_bytes": 512,
+        "compiled_static_tensor_bytes": 1189404,
+        "compiled_static_tensor_mib": 1.1343040466308594,
+        "removed_projection_parameter_count": 131200,
+        "note": "Inference-only compiled representation; the table depends on fixed checkpoint buffers and trained projection weights and is not a trainable model parameter."
+      },
+      "offline_precompute_seconds_cpu": 0.025137831,
+      "offline_precompute_seconds_gpu": 0.017713395,
+      "validation": {
+        "passed": true,
+        "device": "cpu",
+        "stream_bins": 2376,
+        "comparison": "checkpoint adapter prediction and final recurrent hidden state against FP32 sparse fused runtime",
+        "atol": 2e-05,
+        "rtol": 2e-05,
+        "prediction_max_abs": 6.984919309616089e-09,
+        "prediction_p99_abs": 2.601300366222782e-09,
+        "hidden_max_abs_over_stream": 6.109476089477539e-07,
+        "hidden_p99_abs_over_stream": 3.129243850708008e-07,
+        "floating_point_note": "The real-valued algebra is equivalent; composing GEMMs and changing summation order changes FP32 rounding. Values are checked against the stated tolerances."
+      },
+      "gpu_validation": {
+        "passed": true,
+        "device": "cuda",
+        "stream_bins": 2376,
+        "comparison": "checkpoint adapter prediction and final recurrent hidden state against FP32 sparse fused runtime",
+        "atol": 2e-05,
+        "rtol": 2e-05,
+        "prediction_max_abs": 7.450580596923828e-09,
+        "prediction_p99_abs": 2.0954757928848267e-09,
+        "hidden_max_abs_over_stream": 6.658956408500671e-07,
+        "hidden_p99_abs_over_stream": 3.5762786865234375e-07,
+        "floating_point_note": "The real-valued algebra is equivalent; composing GEMMs and changing summation order changes FP32 rounding. Values are checked against the stated tolerances."
+      },
+      "latency": {
+        "cpu": {
+          "adapter_predict": {
+            "p50_ms": 1.0433435,
+            "p95_ms": 2.1600967499999997,
+            "mean_ms": 1.1522607320000002,
+            "min_ms": 0.816685,
+            "max_ms": 2.751288,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 1.303074,
+            "p95_ms": 1.47826075,
+            "mean_ms": 1.2907010559999998,
+            "min_ms": 0.508897,
+            "max_ms": 1.602662,
+            "samples": 1000,
+            "clock": "perf_counter_ns around fused model.forward; input tensor prepared"
+          },
+          "normalization_only": {
+            "p50_ms": 0.0530555,
+            "p95_ms": 0.060441100000000005,
+            "mean_ms": 0.05392269500000001,
+            "min_ms": 0.051407,
+            "max_ms": 0.105036,
+            "samples": 1000,
+            "clock": "perf_counter_ns around fused-runtime host normalization only"
+          }
+        },
+        "gpu": {
+          "adapter_predict": {
+            "p50_ms": 1.2153105,
+            "p95_ms": 2.35787195,
+            "mean_ms": 1.314425958,
+            "min_ms": 1.119996,
+            "max_ms": 2.918257,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.810912013053894,
+            "p95_ms": 0.8908799886703491,
+            "mean_ms": 0.8124271679520607,
+            "min_ms": 0.737280011177063,
+            "max_ms": 1.536895990371704,
+            "samples": 1000,
+            "clock": "CUDA events around fused model.forward; device input already prepared"
+          },
+          "normalization_only_host_cpu": {
+            "p50_ms": 0.0530555,
+            "p95_ms": 0.060441100000000005,
+            "mean_ms": 0.05392269500000001,
+            "min_ms": 0.051407,
+            "max_ms": 0.105036,
+            "samples": 1000,
+            "clock": "perf_counter_ns around fused-runtime host normalization only"
+          }
+        }
+      }
+    },
+    "random": {
+      "variant": "FP32 offline fused basis/temporal rotation/input projection plus exact two-anchor sparse interpolation",
+      "training_or_primary_results_changed": false,
+      "operations_per_bin": {
+        "fixed_encoder_dense_gemm_macs": 0,
+        "sparse_lookup_mac_equivalent": 45056,
+        "gru_plus_readout_macs": 115584,
+        "total_online_mac_equivalents": 160640,
+        "original_dense_online_macs": 1688448,
+        "online_mac_equivalents_saved_per_bin": 1527808,
+        "one_time_offline_fusion_gemm_macs": 184549376,
+        "arithmetic_only_amortization_bins": 121,
+        "arithmetic_only_amortization_seconds_at_50hz": 2.42,
+        "sparse_lookup_scalar_multiplications": 45056,
+        "sparse_lookup_scalar_additions": 44928,
+        "note": "Sparse lookup count treats each of two weighted anchors per channel as one MAC-equivalent; table construction is one-time and excluded from per-bin counts."
+      },
+      "compiled_memory": {
+        "original_checkpoint_parameter_count": 248199,
+        "compiled_retained_trained_parameter_values": 116999,
+        "compiled_fused_table_values": 180224,
+        "compiled_fused_table_bytes_fp32": 720896,
+        "compiled_bias_buffer_bytes_fp32": 512,
+        "compiled_other_runtime_buffer_bytes": 512,
+        "compiled_static_tensor_bytes": 1189404,
+        "compiled_static_tensor_mib": 1.1343040466308594,
+        "removed_projection_parameter_count": 131200,
+        "note": "Inference-only compiled representation; the table depends on fixed checkpoint buffers and trained projection weights and is not a trainable model parameter."
+      },
+      "offline_precompute_seconds_cpu": 0.011192615,
+      "offline_precompute_seconds_gpu": 0.000990657,
+      "validation": {
+        "passed": true,
+        "device": "cpu",
+        "stream_bins": 2376,
+        "comparison": "checkpoint adapter prediction and final recurrent hidden state against FP32 sparse fused runtime",
+        "atol": 2e-05,
+        "rtol": 2e-05,
+        "prediction_max_abs": 4.6566128730773926e-09,
+        "prediction_p99_abs": 1.862645149230957e-09,
+        "hidden_max_abs_over_stream": 5.811452865600586e-07,
+        "hidden_p99_abs_over_stream": 2.980232238769531e-07,
+        "floating_point_note": "The real-valued algebra is equivalent; composing GEMMs and changing summation order changes FP32 rounding. Values are checked against the stated tolerances."
+      },
+      "gpu_validation": {
+        "passed": true,
+        "device": "cuda",
+        "stream_bins": 2376,
+        "comparison": "checkpoint adapter prediction and final recurrent hidden state against FP32 sparse fused runtime",
+        "atol": 2e-05,
+        "rtol": 2e-05,
+        "prediction_max_abs": 3.725290298461914e-09,
+        "prediction_p99_abs": 1.3969838619232178e-09,
+        "hidden_max_abs_over_stream": 4.76837158203125e-07,
+        "hidden_p99_abs_over_stream": 2.8312206268310547e-07,
+        "floating_point_note": "The real-valued algebra is equivalent; composing GEMMs and changing summation order changes FP32 rounding. Values are checked against the stated tolerances."
+      },
+      "latency": {
+        "cpu": {
+          "adapter_predict": {
+            "p50_ms": 0.8749199999999999,
+            "p95_ms": 1.8994041,
+            "mean_ms": 1.017462392,
+            "min_ms": 0.734707,
+            "max_ms": 2.211735,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.550611,
+            "p95_ms": 0.62743965,
+            "mean_ms": 0.556140599,
+            "min_ms": 0.500323,
+            "max_ms": 1.196168,
+            "samples": 1000,
+            "clock": "perf_counter_ns around fused model.forward; input tensor prepared"
+          },
+          "normalization_only": {
+            "p50_ms": 0.046599,
+            "p95_ms": 0.04990015,
+            "mean_ms": 0.045876828,
+            "min_ms": 0.041051,
+            "max_ms": 0.07102,
+            "samples": 1000,
+            "clock": "perf_counter_ns around fused-runtime host normalization only"
+          }
+        },
+        "gpu": {
+          "adapter_predict": {
+            "p50_ms": 1.259729,
+            "p95_ms": 2.4726585,
+            "mean_ms": 1.4143349809999999,
+            "min_ms": 1.129651,
+            "max_ms": 3.02106,
+            "samples": 1000
+          },
+          "model_forward": {
+            "p50_ms": 0.7557439804077148,
+            "p95_ms": 0.8243248164653778,
+            "mean_ms": 0.7648283196687699,
+            "min_ms": 0.7280640006065369,
+            "max_ms": 1.088320016860962,
+            "samples": 1000,
+            "clock": "CUDA events around fused model.forward; device input already prepared"
+          },
+          "normalization_only_host_cpu": {
+            "p50_ms": 0.046599,
+            "p95_ms": 0.04990015,
+            "mean_ms": 0.045876828,
+            "min_ms": 0.041051,
+            "max_ms": 0.07102,
+            "samples": 1000,
+            "clock": "perf_counter_ns around fused-runtime host normalization only"
+          }
+        }
+      }
+    }
+  },
+  "energy": {
+    "measured": false,
+    "reason": "No instrumented energy or power measurement was available.",
+    "claim": "MAC and tensor-storage counts are compute/memory descriptors only; no device watts, joules, battery life, or CO2 are inferred.",
+    "arithmetic_only_sensitivity_proxy": {
+      "measured": false,
+      "energy_per_fp32_multiply_pj": 3.7,
+      "energy_per_fp32_add_pj": 0.9,
+      "arithmetic_subtotal_per_mac_pj": 4.6,
+      "technology_point": "Horowitz 45-nm FP32 rough operation-energy illustration; not either measured device",
+      "per_bin_subtotal_microjoules": {
+        "hdc": 7.7668608,
+        "random": 7.7668608,
+        "mlp": 1.1322624,
+        "plain": 0.6353152,
+        "hdc_fused": 0.738944,
+        "random_fused": 0.738944
+      },
+      "limitations": [
+        "Excludes memory movement, elementwise operations, normalization, and system overhead.",
+        "This technology-point arithmetic subtotal cannot predict measured device energy or power.",
+        "No battery-life or emissions inference is made."
+      ],
+      "citation_keys": [
+        "horowitz2014energy",
+        "schwartz2020green"
+      ]
+    }
+  },
+  "source_sha256": {
+    "hdc_study/model.py": "9ffe4c9a1d5211c9ab6e3c4f4f2c004491238fabee71de49edd791e26439fc52",
+    "hdc_study/engine.py": "6eadcef7128d738bb9bf2d329a7c840576df0b05fcf69f843206c1e0b6e3bce8",
+    "hdc_study/adapter.py": "f0a0123e2e460d1297226d8ce0bbbc7fe8910c9847d8c1f409d97fffc598db55",
+    "hdc_study/results/summary.json": "b01aac901ff964c16e565c53f381f634d5e446da880d3fb83972282306eb99ce",
+    "hdc_study/results/transfer_selection.json": "b6572304a225bc9e08ac8e34926367c155314149276394646cf3d72acbd4e1f6",
+    "neuroinformatics_submission/protocol_generated.tex": "97646d404cf7d3f86473761fd56d7d1087e6e506d6019ebb82fd2ca588e9729f"
+  },
+  "efficiency_script_sha256": "d2c7513b85460807830fe43e7a7ba6d7026d213102a415c40c8f97bf76534e6f",
+  "generated_tex_sha256": "6d5153f5fb914ed6bbc77f43c368defd7fd06784c5faa0d4e5654aa59fc362bb"
+}

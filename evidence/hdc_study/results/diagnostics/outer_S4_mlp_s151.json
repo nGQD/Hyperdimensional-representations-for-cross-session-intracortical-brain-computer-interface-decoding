@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "id": "outer_S4_mlp_s151",
+  "day": "S4",
+  "family": "mlp",
+  "seed": 151,
+  "protocol_sha256": "6862e05b0cbc1c8bdd63a5689d3e8449ae5302e6c20963e599381e4604e29f48",
+  "checkpoint_sha256": "c73c40d7150f663846f33499e8f4f36b6d52587a88e4506d2cc590ce88dcd3b6",
+  "perturb_seed": 700151,
+  "calibration": [
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "prefix_seconds": 0,
+      "r2": 0.571157693862915
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "prefix_seconds": 15,
+      "r2": 0.548529326915741
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "prefix_seconds": 30,
+      "r2": 0.5514107942581177
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "prefix_seconds": 60,
+      "r2": 0.564697265625
+    }
+  ],
+  "robustness": [
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "perturbation": "gain",
+      "level": 0.0,
+      "r2": 0.571157693862915
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "perturbation": "dropout",
+      "level": 0.0,
+      "r2": 0.571157693862915
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "perturbation": "gain",
+      "level": 0.1,
+      "r2": 0.5746394991874695
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "perturbation": "gain",
+      "level": 0.2,
+      "r2": 0.560136616230011
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "perturbation": "gain",
+      "level": 0.4,
+      "r2": 0.5021052956581116
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "perturbation": "dropout",
+      "level": 0.1,
+      "r2": 0.2762607932090759
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "perturbation": "dropout",
+      "level": 0.2,
+      "r2": 0.27694880962371826
+    },
+    {
+      "day": "S4",
+      "family": "mlp",
+      "seed": 151,
+      "perturbation": "dropout",
+      "level": 0.4,
+      "r2": 0.28678610920906067
+    }
+  ]
+}

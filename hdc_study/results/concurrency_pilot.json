@@ -1,0 +1,91 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "workers": 2,
+      "total_seconds": 20.23789596511051,
+      "fits": 8,
+      "rows": [
+        {
+          "family": "hdc",
+          "fit_seconds": 6.761049759108573
+        },
+        {
+          "family": "random",
+          "fit_seconds": 6.937867193017155
+        },
+        {
+          "family": "mlp",
+          "fit_seconds": 3.924329125788063
+        },
+        {
+          "family": "plain",
+          "fit_seconds": 3.7607109639793634
+        },
+        {
+          "family": "hdc",
+          "fit_seconds": 7.054296667221934
+        },
+        {
+          "family": "random",
+          "fit_seconds": 6.850571864284575
+        },
+        {
+          "family": "mlp",
+          "fit_seconds": 2.030881762970239
+        },
+        {
+          "family": "plain",
+          "fit_seconds": 2.389509871136397
+        }
+      ]
+    },
+    {
+      "workers": 3,
+      "total_seconds": 15.016428987961262,
+      "fits": 8,
+      "rows": [
+        {
+          "family": "hdc",
+          "fit_seconds": 8.2541151070036
+        },
+        {
+          "family": "random",
+          "fit_seconds": 8.09707085462287
+        },
+        {
+          "family": "mlp",
+          "fit_seconds": 3.5097758872434497
+        },
+        {
+          "family": "plain",
+          "fit_seconds": 3.335519305896014
+        },
+        {
+          "family": "hdc",
+          "fit_seconds": 6.112131013069302
+        },
+        {
+          "family": "random",
+          "fit_seconds": 6.862351024989039
+        },
+        {
+          "family": "mlp",
+          "fit_seconds": 3.507261976134032
+        },
+        {
+          "family": "plain",
+          "fit_seconds": 2.7242044918239117
+        }
+      ]
+    },
+    {
+      "workers": 4,
+      "failed": true,
+      "error": "CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 11.60 GiB of which 98.31 MiB is free. Process 625628 has 2.70 GiB memory in use. Process 625625 has 3.95 GiB memory in use. Process 625629 has 2.70 GiB memory in use. Including non-PyTorch memory, this process has 2.12 GiB memory in use. Of the allocated memory 1.65 GiB is allocated by PyTorch, and 241.16 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+    }
+  ],
+  "chosen_workers": 3,
+  "rule": "Use concurrency only when measured aggregate throughput improves by at least 10 percent",
+  "note": "Same frozen minibatch/configuration; no evaluation score computed or used"
+}

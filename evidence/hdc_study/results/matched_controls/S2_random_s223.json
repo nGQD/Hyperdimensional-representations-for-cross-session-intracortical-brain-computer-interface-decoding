@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "id": "matched_S2_random_s223",
+  "day": "S2",
+  "family": "random",
+  "seed": 223,
+  "config": {
+    "family": "random",
+    "channels": 176,
+    "outputs": 7,
+    "hidden": 128,
+    "dimension": 512,
+    "temporal_bins": 1,
+    "levels": 8,
+    "codebook_seed": 100223,
+    "recurrence": true,
+    "online_norm": true,
+    "smoothing": 0.9,
+    "dropout": 0.2,
+    "epochs": 50,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "window": 256,
+    "stride": 64,
+    "batch": 256,
+    "amp": false,
+    "no_roles": false,
+    "no_channel_roles": false
+  },
+  "protocol_sha256": "6862e05b0cbc1c8bdd63a5689d3e8449ae5302e6c20963e599381e4604e29f48",
+  "capacity_protocol_sha256": "a58b96b255c0a532963c7457f6d3dc60326231d2f37e978b3b7b486c529acb98",
+  "matched_hdc_identifier": "outer_S2_hdc_s223",
+  "matched_hdc_config": {
+    "family": "hdc",
+    "channels": 176,
+    "outputs": 7,
+    "hidden": 128,
+    "dimension": 512,
+    "temporal_bins": 1,
+    "levels": 8,
+    "codebook_seed": 100223,
+    "recurrence": true,
+    "online_norm": true,
+    "smoothing": 0.9,
+    "dropout": 0.2,
+    "epochs": 50,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "window": 256,
+    "stride": 64,
+    "batch": 256,
+    "amp": false,
+    "no_roles": false,
+    "no_channel_roles": false
+  },
+  "checkpoint": {
+    "path": "checkpoints/outer_S2_random_s223.pt",
+    "sha256": "b9e347c848dc0560941a0ff9702ac42cf88945fdca5a6c972ff9415ed33aeff1"
+  },
+  "reused_identifier": "outer_S2_random_s223",
+  "predictions": {
+    "zero_shot": {
+      "path": "results/predictions/outer_S2_random_s223_zero_shot.npz",
+      "sha256": "aa90fc80dbfd0df3f819803603f27e34c5c0dc148f3e806799795616bb4a5ad8"
+    },
+    "few_shot": {
+      "path": "results/predictions/outer_S2_random_s223_few_shot.npz",
+      "sha256": "d7a9ec6c8be1ba879b3777d8859abc5a16cd7d458e7dd5bb4a92ea5f069c8ad9"
+    }
+  },
+  "prediction_sha256": {
+    "zero_shot": "aa90fc80dbfd0df3f819803603f27e34c5c0dc148f3e806799795616bb4a5ad8",
+    "few_shot": "d7a9ec6c8be1ba879b3777d8859abc5a16cd7d458e7dd5bb4a92ea5f069c8ad9"
+  },
+  "metrics": [
+    {
+      "day": "S2",
+      "r2": 0.30724433064460754,
+      "bins": 19694,
+      "regime": "zero_shot",
+      "calibration_bins": 0,
+      "score_start": 3256,
+      "perturbation": null,
+      "perturbation_level": 0
+    },
+    {
+      "day": "S2",
+      "r2": 0.3286058008670807,
+      "bins": 19694,
+      "regime": "few_shot",
+      "calibration_bins": 3000,
+      "score_start": 3256,
+      "perturbation": null,
+      "perturbation_level": 0
+    }
+  ],
+  "parameters": 248199,
+  "seconds": 94.83973596710712
+}

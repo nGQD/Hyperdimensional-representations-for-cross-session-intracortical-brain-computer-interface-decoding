@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "state": "complete",
+  "protocol_sha256": "6862e05b0cbc1c8bdd63a5689d3e8449ae5302e6c20963e599381e4604e29f48",
+  "completed": 240,
+  "expected": 240,
+  "current": null,
+  "workers": 3,
+  "updated_utc": "2026-10-16T01:15:07Z"
+}

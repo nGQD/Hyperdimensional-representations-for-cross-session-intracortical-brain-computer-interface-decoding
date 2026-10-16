@@ -1,0 +1,34 @@
+{
+  "status": "preparatory",
+  "repository_url": "https://github.com/nGQD/Hyperdimensional-representations-for-cross-session-intracortical-brain-computer-interface-decoding",
+  "final_manuscript_approved": false,
+  "authors": [
+    {
+      "given-names": "Qi Ding",
+      "family-names": "Ng",
+      "affiliation": "Faculty of Computer Science and Information Technology, Universiti Malaya, Kuala Lumpur 50603, Malaysia"
+    },
+    {
+      "given-names": "Chu Kiong",
+      "family-names": "Loo",
+      "affiliation": "Faculty of Computer Science and Information Technology, Universiti Malaya, Kuala Lumpur 50603, Malaysia",
+      "email": "ckloo.um@um.edu.my"
+    },
+    {
+      "given-names": "Jason K.",
+      "family-names": "Eshraghian",
+      "affiliation": "Department of Electrical and Computer Engineering, University of California Santa Cruz, Santa Cruz, CA 95064, USA"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "reproduction_command": "python run.py --stage all",
+  "falcon_evaluator_commit": "27fde21b85b3c631daaa11f39b70992c12824081",
+  "notes": [
+    "This is the intended GitHub repository URL; publication and upload have not been confirmed.",
+    "Author-approved contribution statements remain pending.",
+    "Final manuscript approval remains unconfirmed.",
+    "The package records the FALCON commit, hashes of the included source files, and the local loader patch."
+  ],
+  "contributions": [],
+  "reproduction_validation": "Checks covered command routing, source and checkpoint hashes, and deployment-adapter inference. The wrapper verifies cache hashes when run. Cache regeneration and a second full training run have not been performed from the exported package."
+}

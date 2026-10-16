@@ -1,0 +1,197 @@
+\subsection{Representational mechanism and testable predictions}
+\label{sec:hdc-theory}
+
+Hyperdimensional computing (HDC) represents values with fixed distributed
+codes and combines them through binding and bundling
+\citep{kanerva2009,kleyko2023survey}. Here, the front end encodes each neural
+channel's bounded continuous value, binds the value code to a channel role,
+and superposes the channel contributions. It then binds recent population
+codes to temporal roles before a causal recurrent decoder. The resulting
+similarity kernel and perturbation response motivate the representation
+comparisons below.
+
+\subsubsection{Channel-value binding}
+
+Let $x_{t,c}$ be the normalized, causally smoothed value of channel $c$ at bin
+$t$. The encoder maps it to $u_{t,c}=(1+\tanh x_{t,c})/2\in(0,1)$ and linearly
+interpolates between the two neighboring points on a fixed grid of $L$ anchors.
+Write the resulting nonnegative weights as $a_{t,c,\ell}$, with
+\[
+  \sum_{\ell=1}^{L} a_{t,c,\ell}=1,
+  \qquad
+  a_{t,c,\ell}=0\ \text{except at the two adjacent anchors.}
+\]
+Each anchor $\ell$ has a fixed complex unit code
+$v_\ell=\exp(i\,a_\ell\omega)\in\mathbb{C}^D$, where $a_\ell$ is its
+normalized grid position and each coordinate of $\omega$ is drawn
+independently from a zero-mean Gaussian with standard deviation $2\pi$. Each
+channel $c$ has a fixed complex unit role $r_c\in\mathbb{C}^D$. Their
+elementwise complex product binds value and channel identity. The population
+hypervector is
+\[
+  q_t=\frac{1}{\sqrt{C}}\sum_{c=1}^{C}\sum_{\ell=1}^{L}
+       a_{t,c,\ell}\,(r_c\odot v_\ell)\in\mathbb{C}^{D}.
+\]
+Complex representations are supplied to learned layers as concatenated real
+and imaginary coordinates, retaining input-dependent phase. The codebooks are reproducible functions of
+$\texttt{codebook\_seed}$, which is deterministically paired with the training
+seed. Each final replicate therefore varies both codebook and optimization
+randomness; the two sources of variability are not estimated separately.
+
+The implementation flattens channel-anchor weights into
+$\alpha_t\in\mathbb{R}^{CL}$ and precomputes the bound basis matrix
+$M\in\mathbb{R}^{CL\times 2D}$. It evaluates $\alpha_tM$ with one matrix
+multiplication. The materialized rate encoding has shape
+$N\times T\times C\times L$, where $N$ is batch size, rather than an
+$N\times T\times C\times D$ activation.
+
+For independently sampled uniform channel roles and Gaussian value
+frequencies, define normalized similarity as the real part of the complex
+inner product divided by hyperdimension:
+\[
+ \begin{aligned}
+ k(x,x')&=\mathbb{E}_{r,\omega}\!\left[\frac{1}{D}
+                    \operatorname{Re}\{q(x)^Hq(x')\}\right]\\
+   &=\frac{1}{C}\sum_{c=1}^{C}\sum_{\ell=1}^{L}
+      \sum_{m=1}^{L}a_{c,\ell}(x)\,a_{c,m}(x')
+      \exp\!\left[-\frac{(2\pi)^2}{2}(a_\ell-a_m)^2\right].
+ \end{aligned}
+\]
+Distinct channel roles have zero expected cross-product, while the Gaussian
+characteristic function gives the anchor-value similarity kernel. The anchor
+vectors use a random Fourier construction \citep{rahimi2007features}; linear
+interpolation extends this finite codebook to continuous values and yields a
+finite-grid approximation to graded Gaussian similarity. Channel binding
+combines per-channel similarities in a shared representation, with channel
+identity remaining explicit through the distinct role vectors.
+
+For a single bounded value $u\in[0,1]$, its interpolation weight at the
+uniform anchor position $a_\ell=(\ell-1)/(L-1)$ is
+\[
+  p_\ell(u)=\max\!\left\{0,1-\left|(L-1)u-(\ell-1)\right|\right\}.
+\]
+The exact finite-grid kernel for one channel is
+\[
+  \mathcal{K}_L(u,u')=\sum_{\ell=1}^{L}\sum_{m=1}^{L}
+      p_\ell(u)p_m(u')
+      \exp\!\left[-\frac{(2\pi)^2}{2}(a_\ell-a_m)^2\right].
+\]
+Because the anchor grid is finite, this kernel can depend on the absolute
+values as well as their separation. The curve in Fig.~\ref{fig:architecture}
+therefore averages the kernel uniformly over valid value pairs with a fixed
+separation $\delta$:
+\[
+  \kappa_L(\delta)=\frac{1}{1-\delta}
+      \int_{0}^{1-\delta}\mathcal{K}_L(u,u+\delta)\,du,
+      \qquad 0\leq\delta<1,
+\]
+with the endpoint at $\delta=1$ given by the continuous limit. The plotted
+quantity is $\kappa_8(\delta)/\kappa_8(0)$.
+
+The expected squared normalized population perturbation has a related exact
+form. For two inputs $x,x'$ and expectation only over independently sampled
+channel roles, with the value codebook held fixed,
+\[
+ \mathbb{E}_{r}\!\left[\frac{\|q(x)-q(x')\|_2^2}{D}\right]
+   =\frac{1}{C}\sum_{c=1}^{C}
+       \frac{\|v(x_c)-v(x'_c)\|_2^2}{D}.
+\]
+Here $v(x_c)=\sum_\ell a_{c,\ell}(x)v_\ell$. Since interpolation is convex
+and each anchor vector has norm $\sqrt{D}$,
+$\|v(x_c)\|_2\leq\sqrt{D}$. If the inputs differ in at most $m$ channels,
+the expression is bounded by $4m/C$. This bounds expected representation
+change under channel-role randomness; it is not a prediction-accuracy
+guarantee or a guarantee of invariance to channel-identity changes.
+
+The fixed random-feature control receives the same interpolated
+$CL$-dimensional input and uses an independent Gaussian mixing matrix with the
+same output width. Both fixed encoders have no trainable parameters. At a
+matched $(D,K)$ candidate, HDC and random have identical downstream learned
+architectures and total trainable parameter counts. Their first learned stage
+is a linear projection from $2D$ to the common hidden width, followed by layer
+normalization. The random matrix's expected feature inner
+product is proportional to the dot product of interpolated channel-anchor
+weights. If $\alpha(x)\in\mathbb{R}^{CL}$ is the flattened interpolated input
+and each entry of the random matrix $G$ has variance $1/(2C)$, then
+\[
+  \mathbb{E}_{G}\!\left[\frac{1}{D}
+    \langle \alpha(x)G,\alpha(x')G\rangle\right]
+  =\frac{1}{C}\langle\alpha(x),\alpha(x')\rangle.
+\]
+The HDC codebook instead induces the Gaussian anchor-similarity kernel above.
+For the random control, the single-channel kernel is
+$\mathcal{K}^{\mathrm{random}}_L(u,u')=\sum_\ell p_\ell(u)p_\ell(u')$.
+Figure~\ref{fig:architecture} applies the same pair averaging to both
+kernels and normalizes each by its own value at zero separation. The random
+kernel vanishes when the two interpolation supports do not overlap; HDC's
+correlated anchors retain graded similarity across a wider value range.
+This difference specifies the feature geometry tested by the matched
+random-control comparison.
+
+The MLP control receives the normalized neural input as a $K$-bin lag stack and
+applies a trainable nonlinear projection to the common hidden width. Its
+bottleneck width is
+\[
+ w=\operatorname{round}\!\left(\frac{2D\,H}{C K+H+1}\right),
+\]
+where $H$ is the recurrent hidden size. This makes the MLP projection's
+trainable parameter count within 1\% of the HDC/random projection for the
+searched dimensions and context lengths. The plain control uses a learned
+linear projection of the same $C K$ normalized lag stack. Every family searches the
+same context lengths, $K\in\{1,8\}$, but the selected context length can differ
+between families. The fixed mappings add no information about the target
+beyond the input; either mapping may help a finite-capacity downstream decoder
+use that input, which is an empirical question.
+
+\subsubsection{Causal temporal role binding}
+
+For a temporal window of $K$ bins, each lag $j$ has a fixed complex unit role
+$\rho_j\in\mathbb{C}^D$. The temporal representation is
+\[
+  z_t=\frac{1}{\sqrt{K}}\sum_{j=0}^{K-1}
+        \rho_j\odot q_{t-j}.
+\]
+Complex multiplication binds a population code to its lag role; addition
+bundles the ordered recent codes. For independent random temporal roles, the
+expected similarity between two bundled windows retains aligned-lag
+similarities, while cross-lag terms have zero expectation:
+\[
+ k_{\mathrm{temp}}(t,s)
+  =\mathbb{E}_{\rho}\!\left[\frac{1}{D}
+          \operatorname{Re}\{z_t^Hz'_s\}\right]
+   =\frac{1}{K}\sum_{j=0}^{K-1}
+       \frac{1}{D}\operatorname{Re}\{q_{t-j}^Hq'_{s-j}\}.
+\]
+This gives an order-sensitive hypothesis: matching activity at the same
+relative lags contributes to similarity. For a given candidate value of $K$,
+the HDC, random, MLP, and plain families receive the same causal context
+before the common GRU. The selected context length can differ across families.
+The \texttt{no\_roles} ablation replaces each temporal role with the all-one
+vector while preserving the lag window and bundling operation. At $K=1$, this
+changes only a fixed coordinate rotation and does not test temporal ordering. The
+\texttt{no\_channel\_roles} ablation replaces all $r_c$ with the all-one
+vector, removing explicit channel identity from HDC value binding.
+
+The streaming state stores the preceding $K-1$ encoded population vectors for
+HDC/random, or the preceding $K-1$ normalized neural vectors for MLP/plain. Each
+candidate uses only current and preceding bins. Chunked inference is
+equivalent to single-pass inference up to floating-point summation order. State
+is local to the decoder instance and is cleared at recording reset.
+
+\subsubsection{Cross-session rationale and testable comparisons}
+
+The hypothesis is that channel-value codes and explicit lag roles may provide
+a bounded feature basis for a readout trained on other sessions. The bounded
+value transform limits the effect of extreme normalized rates, while temporal
+binding presents short ordered patterns to the recurrent decoder. Their
+contribution is tested by comparing the selected HDC configuration with the
+same-basis random projection, learned MLP, and conditional channel-role and
+temporal-role ablations on held-out sessions. Synthetic gain and channel
+dropout tests probe sensitivity to those specified input perturbations.
+
+The representation does not align neural manifolds or identify corresponding
+units across sessions. A fixed channel role assumes that channel index $c$
+retains its meaning within the input schema; changes in unit identity or
+channel ordering alter the encoded vector. Any observed transfer therefore
+applies to the specified normalization and channel mapping. The evaluation
+holds these choices fixed across representation families.

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "workers": 3,
+  "train_groups": 6,
+  "dimension": 512,
+  "temporal_bins": 8,
+  "batch": 256,
+  "epochs": 3,
+  "seconds": 23.854888916015625,
+  "rows": [
+    {
+      "family": "hdc",
+      "fit_seconds": 17.035975192207843
+    },
+    {
+      "family": "hdc",
+      "fit_seconds": 16.807692484930158
+    },
+    {
+      "family": "hdc",
+      "fit_seconds": 16.70449304394424
+    }
+  ]
+}

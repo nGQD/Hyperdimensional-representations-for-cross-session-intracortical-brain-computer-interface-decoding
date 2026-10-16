@@ -1,0 +1,4451 @@
+{
+  "schema": 1,
+  "complete": true,
+  "title": "Observed comparison frontier for H1 decoding",
+  "scope": "Conditional on these selected configurations, measured representative-checkpoint costs, and observed six-group means; not a state-of-the-art comparison.",
+  "inputs": {
+    "summary": {
+      "path": "hdc_study/results/summary.json",
+      "sha256": "b01aac901ff964c16e565c53f381f634d5e446da880d3fb83972282306eb99ce"
+    },
+    "efficiency": {
+      "path": "hdc_study/results/efficiency.json",
+      "sha256": "7df5b737b7fb91eed094198604db2af52a802c4764faf00d95f55b9f17686558"
+    }
+  },
+  "pairing_validation": {
+    "passed": true,
+    "rule": "For each family and outer session, the highest-score selected inner candidate is checked against the profiled transfer checkpoint on all listed inference-cost dimensions.",
+    "dimensions_compared": [
+      "family",
+      "channels",
+      "outputs",
+      "hidden",
+      "dimension",
+      "temporal_bins",
+      "levels",
+      "recurrence",
+      "online_norm",
+      "smoothing",
+      "no_roles",
+      "no_channel_roles"
+    ],
+    "families": {
+      "hdc": {
+        "profiled_selected_key": "hdc_d512_k1_lr0.0002",
+        "profiled_checkpoint": "hdc_study/checkpoints/transfer_hdc_s101.pt",
+        "profiled_checkpoint_sha256": "0e82008235d5db8f6ed76efd3f50c355d39807e8c601eb219da3a2aeb6c14c6f",
+        "profiled_training_seed": 101,
+        "profiled_config_cost_dimensions": {
+          "family": "hdc",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 512,
+          "temporal_bins": 1,
+          "levels": 8,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "outer_selections": [
+          {
+            "session": "S0",
+            "selected_key": "hdc_d512_k1_lr0.0002",
+            "selected_score": 0.3971716153621674,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "hdc",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S1",
+            "selected_key": "hdc_d512_k1_lr0.0002",
+            "selected_score": 0.3857889974117279,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "hdc",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S2",
+            "selected_key": "hdc_d512_k1_lr0.0002",
+            "selected_score": 0.40421059489250183,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "hdc",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S3",
+            "selected_key": "hdc_d512_k1_lr0.0002",
+            "selected_score": 0.3889446985721588,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "hdc",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S4",
+            "selected_key": "hdc_d512_k1_lr0.0002",
+            "selected_score": 0.397188720703125,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "hdc",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S5",
+            "selected_key": "hdc_d512_k1_lr0.0002",
+            "selected_score": 0.39402177929878235,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "hdc",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          }
+        ],
+        "all_outer_cost_dimensions_match": true
+      },
+      "random": {
+        "profiled_selected_key": "random_d512_k1_lr0.0002",
+        "profiled_checkpoint": "hdc_study/checkpoints/transfer_random_s101.pt",
+        "profiled_checkpoint_sha256": "48ad547b6f097a3edb66a66009e3319c4f930b28ca90bdca231599c8287c48a6",
+        "profiled_training_seed": 101,
+        "profiled_config_cost_dimensions": {
+          "family": "random",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 512,
+          "temporal_bins": 1,
+          "levels": 8,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "outer_selections": [
+          {
+            "session": "S0",
+            "selected_key": "random_d512_k1_lr0.0002",
+            "selected_score": 0.36653165459632875,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "random",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S1",
+            "selected_key": "random_d512_k1_lr0.0002",
+            "selected_score": 0.3552231168746948,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "random",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S2",
+            "selected_key": "random_d512_k1_lr0.0002",
+            "selected_score": 0.3733432734012604,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "random",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S3",
+            "selected_key": "random_d512_k1_lr0.0002",
+            "selected_score": 0.35527375936508176,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "random",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S4",
+            "selected_key": "random_d512_k1_lr0.0002",
+            "selected_score": 0.36552563071250915,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "random",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S5",
+            "selected_key": "random_d512_k1_lr0.0002",
+            "selected_score": 0.36375113010406496,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "random",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          }
+        ],
+        "all_outer_cost_dimensions_match": true
+      },
+      "mlp": {
+        "profiled_selected_key": "mlp_d512_k8_lr0.0002",
+        "profiled_checkpoint": "hdc_study/checkpoints/transfer_mlp_s101.pt",
+        "profiled_checkpoint_sha256": "d2ec288c09abda27a0a41ccace6d730fd66865c4de590deb778c23eabcb80f04",
+        "profiled_training_seed": 101,
+        "profiled_config_cost_dimensions": {
+          "family": "mlp",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 512,
+          "temporal_bins": 8,
+          "levels": 8,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "outer_selections": [
+          {
+            "session": "S0",
+            "selected_key": "mlp_d512_k8_lr0.0002",
+            "selected_score": 0.5403745126724243,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "mlp",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 8,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S1",
+            "selected_key": "mlp_d512_k8_lr0.0002",
+            "selected_score": 0.5245035815238953,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "mlp",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 8,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S2",
+            "selected_key": "mlp_d512_k8_lr0.0002",
+            "selected_score": 0.5390634703636169,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "mlp",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 8,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S3",
+            "selected_key": "mlp_d512_k8_lr0.0002",
+            "selected_score": 0.5302245688438415,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "mlp",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 8,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S4",
+            "selected_key": "mlp_d512_k8_lr0.0002",
+            "selected_score": 0.5316897785663605,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "mlp",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 8,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S5",
+            "selected_key": "mlp_d512_k8_lr0.0002",
+            "selected_score": 0.5409685301780701,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "mlp",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 512,
+              "temporal_bins": 8,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          }
+        ],
+        "all_outer_cost_dimensions_match": true
+      },
+      "plain": {
+        "profiled_selected_key": "plain_d256_k1_lr0.0008",
+        "profiled_checkpoint": "hdc_study/checkpoints/transfer_plain_s101.pt",
+        "profiled_checkpoint_sha256": "acbe07c16911e99a3583e52b809aa9739729e014cf4f5278ba02ff74bbcf2dc6",
+        "profiled_training_seed": 101,
+        "profiled_config_cost_dimensions": {
+          "family": "plain",
+          "channels": 176,
+          "outputs": 7,
+          "hidden": 128,
+          "dimension": 256,
+          "temporal_bins": 1,
+          "levels": 8,
+          "recurrence": true,
+          "online_norm": true,
+          "smoothing": 0.9,
+          "no_roles": false,
+          "no_channel_roles": false
+        },
+        "outer_selections": [
+          {
+            "session": "S0",
+            "selected_key": "plain_d256_k1_lr0.0008",
+            "selected_score": 0.6116970562934876,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "plain",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 256,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S1",
+            "selected_key": "plain_d256_k1_lr0.0008",
+            "selected_score": 0.6090398013591767,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "plain",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 256,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S2",
+            "selected_key": "plain_d256_k1_lr0.0008",
+            "selected_score": 0.6315606498718261,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "plain",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 256,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S3",
+            "selected_key": "plain_d256_k1_lr0.0008",
+            "selected_score": 0.6030504393577576,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "plain",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 256,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S4",
+            "selected_key": "plain_d256_k1_lr0.0008",
+            "selected_score": 0.6096522164344788,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "plain",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 256,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          },
+          {
+            "session": "S5",
+            "selected_key": "plain_d256_k1_lr0.0008",
+            "selected_score": 0.6282608389854432,
+            "cost_relevant_dimensions_match": true,
+            "differences": {},
+            "outer_config_cost_dimensions": {
+              "family": "plain",
+              "channels": 176,
+              "outputs": 7,
+              "hidden": 128,
+              "dimension": 256,
+              "temporal_bins": 1,
+              "levels": 8,
+              "recurrence": true,
+              "online_norm": true,
+              "smoothing": 0.9,
+              "no_roles": false,
+              "no_channel_roles": false
+            }
+          }
+        ],
+        "all_outer_cost_dimensions_match": true
+      }
+    }
+  },
+  "score_basis": {
+    "primary": "summary.scores, few_shot, all six primary outer groups",
+    "zero_label_and_dropout": "summary.robustness, perturbation=dropout, levels 0, 0.1, 0.2, and 0.4; the protocol's zero-label condition",
+    "intervals": "Source descriptive 95% group-bootstrap intervals are preserved for display. Frontier membership uses means only; no statistical comparison is implied."
+  },
+  "cost_basis": {
+    "mac_equivalents_per_bin": {
+      "unit": "MAC-equivalents per input bin",
+      "original_basis": "efficiency.families[*].operations_per_bin.total_dense_macs_per_bin; one multiply-accumulate is one MAC, and listed non-GEMM operations are excluded.",
+      "compiled_basis": "efficiency.fused_variants[*].operations_per_bin.total_online_mac_equivalents; two-anchor sparse lookups are each counted as a MAC-equivalent. Offline table fusion is excluded."
+    },
+    "cpu_p95_ms": {
+      "unit": "milliseconds per one-bin adapter_predict call (CPU p95)",
+      "basis": "The measured batch-one adapter_predict p95, including the source-listed causal host normalization, transfer where applicable, model call, and output handling; excludes file I/O, data loading, calibration fitting, and trial scheduling."
+    },
+    "gpu_p95_ms": {
+      "unit": "milliseconds per one-bin adapter_predict call (GPU p95)",
+      "basis": "The measured batch-one adapter_predict p95, including the source-listed causal host normalization, transfer where applicable, model call, and output handling; excludes file I/O, data loading, calibration fitting, and trial scheduling."
+    },
+    "static_memory_mib": {
+      "unit": "MiB (2^20 bytes)",
+      "original_basis": "Resident trained parameter plus registered buffer storage from the representative original checkpoint.",
+      "compiled_basis": "Compiled static tensor bytes from the inference-only representation; it is not a measured process peak or device-wide memory footprint."
+    },
+    "measurement_scope": {
+      "checkpoint_rule": "Existing trained transfer checkpoint, training seed 101, fitted on all six held-in groups; codebook_seed=100000+seed=100101",
+      "measurement": {
+        "command": ".venv/bin/python hdc_study/efficiency.py",
+        "batch_size": 1,
+        "bins_per_predict_call": 1,
+        "nominal_bin_rate_hz": 50,
+        "nominal_deadline_ms": 20.0,
+        "warmup_steps": 100,
+        "measured_steps": 1000,
+        "model_forward_includes_normalization": false,
+        "adapter_predict_includes": [
+          "finite-value check",
+          "host online moments and smoothing",
+          "host-to-device transfer where applicable",
+          "strict-FP32 model forward",
+          "prediction transfer and target unnormalization"
+        ],
+        "adapter_predict_excludes": [
+          "file I/O",
+          "data loading",
+          "calibration fitting",
+          "trial scheduling"
+        ],
+        "inputs": {
+          "cache": "hdc_study/cache/sub-HumanPitt-held-out-calib_ses-19250126T113454.npz",
+          "sha256": "da19ca65f7988b181a4cc2269e9538c00252802cfb915ec1321e051031fe3158",
+          "held_out_input_bins": 2376,
+          "input_shape": [
+            2376,
+            176
+          ],
+          "fields_loaded": [
+            "x"
+          ],
+          "labels_loaded_or_used": false,
+          "first_measured_recording": "falcon-challenge/data/000954/sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250126T113454.nwb"
+        },
+        "cpu": {
+          "model": "Intel(R) Core(TM) i9-14900HX",
+          "logical_cpus": 32,
+          "torch_threads": 4,
+          "torch_interop_threads": 24,
+          "python": "3.10.20",
+          "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39"
+        },
+        "torch_version": "2.5.1+cu124",
+        "cuda_available_and_kernel_smoke_tested": true,
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+        "gpu_driver_snapshot_before_benchmark": {
+          "query": "NVIDIA GeForce RTX 4080 Laptop GPU, 0, 241, 12282"
+        },
+        "inference_precision": "FP32; TF32 disabled in model forward, autocast disabled",
+        "gpu_model_forward_clock": "CUDA events with synchronization every 100 samples and at end",
+        "gpu_adapter_clock": "perf_counter_ns around complete predict, synchronized after each returned output",
+        "latency_note": "Single process, batch one, sequential causal stream; p50/p95 are empirical timing quantiles and do not establish hard real-time behavior."
+      },
+      "latency_note": "Single process, batch one, sequential causal stream; p50/p95 are empirical timing quantiles and do not establish hard real-time behavior.",
+      "latency_is_outer_fold_mean": false
+    }
+  },
+  "compiled_accuracy_scope": {
+    "families": {
+      "hdc": {
+        "variant": "FP32 offline fused basis/temporal rotation/input projection plus exact two-anchor sparse interpolation",
+        "real_algebra_equivalent_for_fixed_parameters": true,
+        "accuracy_assignment": "Inherits the original family mean and descriptive interval by exact real-valued algebra; no full outer-fold compiled rescore was run.",
+        "training_or_primary_results_changed": false,
+        "cpu_numerical_check": {
+          "passed": true,
+          "device": "cpu",
+          "stream_bins": 2376,
+          "comparison": "checkpoint adapter prediction and final recurrent hidden state against FP32 sparse fused runtime",
+          "atol": 2e-05,
+          "rtol": 2e-05,
+          "prediction_max_abs": 6.984919309616089e-09,
+          "prediction_p99_abs": 2.601300366222782e-09,
+          "hidden_max_abs_over_stream": 6.109476089477539e-07,
+          "hidden_p99_abs_over_stream": 3.129243850708008e-07,
+          "floating_point_note": "The real-valued algebra is equivalent; composing GEMMs and changing summation order changes FP32 rounding. Values are checked against the stated tolerances."
+        },
+        "gpu_numerical_check": {
+          "passed": true,
+          "device": "cuda",
+          "stream_bins": 2376,
+          "comparison": "checkpoint adapter prediction and final recurrent hidden state against FP32 sparse fused runtime",
+          "atol": 2e-05,
+          "rtol": 2e-05,
+          "prediction_max_abs": 7.450580596923828e-09,
+          "prediction_p99_abs": 2.0954757928848267e-09,
+          "hidden_max_abs_over_stream": 6.658956408500671e-07,
+          "hidden_p99_abs_over_stream": 3.5762786865234375e-07,
+          "floating_point_note": "The real-valued algebra is equivalent; composing GEMMs and changing summation order changes FP32 rounding. Values are checked against the stated tolerances."
+        }
+      },
+      "random": {
+        "variant": "FP32 offline fused basis/temporal rotation/input projection plus exact two-anchor sparse interpolation",
+        "real_algebra_equivalent_for_fixed_parameters": true,
+        "accuracy_assignment": "Inherits the original family mean and descriptive interval by exact real-valued algebra; no full outer-fold compiled rescore was run.",
+        "training_or_primary_results_changed": false,
+        "cpu_numerical_check": {
+          "passed": true,
+          "device": "cpu",
+          "stream_bins": 2376,
+          "comparison": "checkpoint adapter prediction and final recurrent hidden state against FP32 sparse fused runtime",
+          "atol": 2e-05,
+          "rtol": 2e-05,
+          "prediction_max_abs": 4.6566128730773926e-09,
+          "prediction_p99_abs": 1.862645149230957e-09,
+          "hidden_max_abs_over_stream": 5.811452865600586e-07,
+          "hidden_p99_abs_over_stream": 2.980232238769531e-07,
+          "floating_point_note": "The real-valued algebra is equivalent; composing GEMMs and changing summation order changes FP32 rounding. Values are checked against the stated tolerances."
+        },
+        "gpu_numerical_check": {
+          "passed": true,
+          "device": "cuda",
+          "stream_bins": 2376,
+          "comparison": "checkpoint adapter prediction and final recurrent hidden state against FP32 sparse fused runtime",
+          "atol": 2e-05,
+          "rtol": 2e-05,
+          "prediction_max_abs": 3.725290298461914e-09,
+          "prediction_p99_abs": 1.3969838619232178e-09,
+          "hidden_max_abs_over_stream": 4.76837158203125e-07,
+          "hidden_p99_abs_over_stream": 2.8312206268310547e-07,
+          "floating_point_note": "The real-valued algebra is equivalent; composing GEMMs and changing summation order changes FP32 rounding. Values are checked against the stated tolerances."
+        }
+      }
+    },
+    "scope_note": "The available numerical comparison used 2,376 input bins from the held-out calibration stream for training seed 101 on CPU and GPU. It is not a full outer-fold score rescore and does not establish accuracy equivalence across outer data by fresh scoring."
+  },
+  "dominance_rule": {
+    "objective": "Maximize mean R^2 and minimize one cost at a time.",
+    "strictness": "At least one strict improvement is required. At equal cost, a strictly higher mean dominates; an exact mean-and-cost tie leaves both points nondominated.",
+    "intervals_used_for_membership": false,
+    "interpolation_or_convex_hull_used": false
+  },
+  "analyses": [
+    {
+      "key": "primary_few_shot",
+      "label": "60-s calibration",
+      "condition": {
+        "regime": "few_shot",
+        "perturbation": null,
+        "dropout_fraction": null
+      },
+      "membership_unit": "One participant's six held-out outer session-group means; the family mean and its source interval are copied to both compiled and original points.",
+      "records": [
+        {
+          "point_id": "hdc_original",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "original",
+          "mean_r2": 0.4442172944545746,
+          "ci95": [
+            0.4124511167407036,
+            0.4687949409087499
+          ],
+          "score_source": "summary.scores",
+          "source_record": {
+            "family": "hdc",
+            "regime": "few_shot",
+            "perturbation": null,
+            "level": null
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80854905,
+            "gpu_p95_ms": 3.00478425,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "hdc_compiled",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "compiled",
+          "mean_r2": 0.4442172944545746,
+          "ci95": [
+            0.4124511167407036,
+            0.4687949409087499
+          ],
+          "score_source": "summary.scores",
+          "source_record": {
+            "family": "hdc",
+            "regime": "few_shot",
+            "perturbation": null,
+            "level": null
+          },
+          "accuracy_inherited_from": "hdc_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 2.1600967499999997,
+            "gpu_p95_ms": 2.35787195,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_original",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "original",
+          "mean_r2": 0.392081727584203,
+          "ci95": [
+            0.36038990567127865,
+            0.41779146740833917
+          ],
+          "score_source": "summary.scores",
+          "source_record": {
+            "family": "random",
+            "regime": "few_shot",
+            "perturbation": null,
+            "level": null
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80165065,
+            "gpu_p95_ms": 2.90189965,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_compiled",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "compiled",
+          "mean_r2": 0.392081727584203,
+          "ci95": [
+            0.36038990567127865,
+            0.41779146740833917
+          ],
+          "score_source": "summary.scores",
+          "source_record": {
+            "family": "random",
+            "regime": "few_shot",
+            "perturbation": null,
+            "level": null
+          },
+          "accuracy_inherited_from": "random_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 1.8994041,
+            "gpu_p95_ms": 2.4726585,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "mlp_original",
+          "family": "mlp",
+          "family_label": "MLP features",
+          "implementation": "original",
+          "mean_r2": 0.5764450192451477,
+          "ci95": [
+            0.5470432271560034,
+            0.6015510002772013
+          ],
+          "score_source": "summary.scores",
+          "source_record": {
+            "family": "mlp",
+            "regime": "few_shot",
+            "perturbation": null,
+            "level": null
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 246144.0,
+            "cpu_p95_ms": 1.53474505,
+            "gpu_p95_ms": 2.0945420500000003,
+            "static_memory_mib": 0.9764251708984375
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "plain_original",
+          "family": "plain",
+          "family_label": "Plain GRU",
+          "implementation": "original",
+          "mean_r2": 0.6414435615142186,
+          "ci95": [
+            0.5975713001936673,
+            0.676653955380122
+          ],
+          "score_source": "summary.scores",
+          "source_record": {
+            "family": "plain",
+            "regime": "few_shot",
+            "perturbation": null,
+            "level": null
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 138112.0,
+            "cpu_p95_ms": 1.4485409999999999,
+            "gpu_p95_ms": 1.0199068,
+            "static_memory_mib": 0.5346946716308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        }
+      ]
+    },
+    {
+      "key": "zero_label_dropout_0",
+      "label": "Zero labels, 0%",
+      "condition": {
+        "regime": "zero_label",
+        "perturbation": "dropout",
+        "dropout_fraction": 0.0
+      },
+      "membership_unit": "One participant's six held-out outer session-group means; the family mean and its source interval are copied to both compiled and original points.",
+      "records": [
+        {
+          "point_id": "hdc_original",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "original",
+          "mean_r2": 0.4216769759853681,
+          "ci95": [
+            0.3882237027088801,
+            0.4508972858389218
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "hdc",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.0
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80854905,
+            "gpu_p95_ms": 3.00478425,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "hdc_compiled",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "compiled",
+          "mean_r2": 0.4216769759853681,
+          "ci95": [
+            0.3882237027088801,
+            0.4508972858389218
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "hdc",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.0
+          },
+          "accuracy_inherited_from": "hdc_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 2.1600967499999997,
+            "gpu_p95_ms": 2.35787195,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_original",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "original",
+          "mean_r2": 0.3734406361977259,
+          "ci95": [
+            0.3423696994781494,
+            0.3999273538589478
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "random",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.0
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80165065,
+            "gpu_p95_ms": 2.90189965,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_compiled",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "compiled",
+          "mean_r2": 0.3734406361977259,
+          "ci95": [
+            0.3423696994781494,
+            0.3999273538589478
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "random",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.0
+          },
+          "accuracy_inherited_from": "random_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 1.8994041,
+            "gpu_p95_ms": 2.4726585,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "mlp_original",
+          "family": "mlp",
+          "family_label": "MLP features",
+          "implementation": "original",
+          "mean_r2": 0.5548221399386724,
+          "ci95": [
+            0.5246061503887177,
+            0.5830465972423553
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "mlp",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.0
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 246144.0,
+            "cpu_p95_ms": 1.53474505,
+            "gpu_p95_ms": 2.0945420500000003,
+            "static_memory_mib": 0.9764251708984375
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "plain_original",
+          "family": "plain",
+          "family_label": "Plain GRU",
+          "implementation": "original",
+          "mean_r2": 0.6233123456438383,
+          "ci95": [
+            0.5748974834879239,
+            0.6605583633482451
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "plain",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.0
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 138112.0,
+            "cpu_p95_ms": 1.4485409999999999,
+            "gpu_p95_ms": 1.0199068,
+            "static_memory_mib": 0.5346946716308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        }
+      ]
+    },
+    {
+      "key": "zero_label_dropout_0_1",
+      "label": "Zero labels, 10%",
+      "condition": {
+        "regime": "zero_label",
+        "perturbation": "dropout",
+        "dropout_fraction": 0.1
+      },
+      "membership_unit": "One participant's six held-out outer session-group means; the family mean and its source interval are copied to both compiled and original points.",
+      "records": [
+        {
+          "point_id": "hdc_original",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "original",
+          "mean_r2": 0.3606510544816653,
+          "ci95": [
+            0.3327484220266343,
+            0.3885991329948108
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "hdc",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.1
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80854905,
+            "gpu_p95_ms": 3.00478425,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "hdc_compiled",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "compiled",
+          "mean_r2": 0.3606510544816653,
+          "ci95": [
+            0.3327484220266343,
+            0.3885991329948108
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "hdc",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.1
+          },
+          "accuracy_inherited_from": "hdc_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 2.1600967499999997,
+            "gpu_p95_ms": 2.35787195,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_original",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "original",
+          "mean_r2": 0.3153443545103073,
+          "ci95": [
+            0.28911011641224227,
+            0.34086143299937244
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "random",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.1
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80165065,
+            "gpu_p95_ms": 2.90189965,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_compiled",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "compiled",
+          "mean_r2": 0.3153443545103073,
+          "ci95": [
+            0.28911011641224227,
+            0.34086143299937244
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "random",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.1
+          },
+          "accuracy_inherited_from": "random_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 1.8994041,
+            "gpu_p95_ms": 2.4726585,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "mlp_original",
+          "family": "mlp",
+          "family_label": "MLP features",
+          "implementation": "original",
+          "mean_r2": 0.43471907253066694,
+          "ci95": [
+            0.4152927172680696,
+            0.4621518730806807
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "mlp",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.1
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 246144.0,
+            "cpu_p95_ms": 1.53474505,
+            "gpu_p95_ms": 2.0945420500000003,
+            "static_memory_mib": 0.9764251708984375
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "plain_original",
+          "family": "plain",
+          "family_label": "Plain GRU",
+          "implementation": "original",
+          "mean_r2": 0.5123076019187768,
+          "ci95": [
+            0.4762816699842612,
+            0.5502199225127696
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "plain",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.1
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 138112.0,
+            "cpu_p95_ms": 1.4485409999999999,
+            "gpu_p95_ms": 1.0199068,
+            "static_memory_mib": 0.5346946716308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        }
+      ]
+    },
+    {
+      "key": "zero_label_dropout_0_2",
+      "label": "Zero labels, 20%",
+      "condition": {
+        "regime": "zero_label",
+        "perturbation": "dropout",
+        "dropout_fraction": 0.2
+      },
+      "membership_unit": "One participant's six held-out outer session-group means; the family mean and its source interval are copied to both compiled and original points.",
+      "records": [
+        {
+          "point_id": "hdc_original",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "original",
+          "mean_r2": 0.28492470358808836,
+          "ci95": [
+            0.2594696345428626,
+            0.3087164580821991
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "hdc",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.2
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80854905,
+            "gpu_p95_ms": 3.00478425,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "hdc_compiled",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "compiled",
+          "mean_r2": 0.28492470358808836,
+          "ci95": [
+            0.2594696345428626,
+            0.3087164580821991
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "hdc",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.2
+          },
+          "accuracy_inherited_from": "hdc_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 2.1600967499999997,
+            "gpu_p95_ms": 2.35787195,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_original",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "original",
+          "mean_r2": 0.25331407953053714,
+          "ci95": [
+            0.2347996442889174,
+            0.27612885795533654
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "random",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.2
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80165065,
+            "gpu_p95_ms": 2.90189965,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_compiled",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "compiled",
+          "mean_r2": 0.25331407953053714,
+          "ci95": [
+            0.2347996442889174,
+            0.27612885795533654
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "random",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.2
+          },
+          "accuracy_inherited_from": "random_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 1.8994041,
+            "gpu_p95_ms": 2.4726585,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "mlp_original",
+          "family": "mlp",
+          "family_label": "MLP features",
+          "implementation": "original",
+          "mean_r2": 0.32241590147217114,
+          "ci95": [
+            0.297723201662302,
+            0.35060510933399197
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "mlp",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.2
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 246144.0,
+            "cpu_p95_ms": 1.53474505,
+            "gpu_p95_ms": 2.0945420500000003,
+            "static_memory_mib": 0.9764251708984375
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "plain_original",
+          "family": "plain",
+          "family_label": "Plain GRU",
+          "implementation": "original",
+          "mean_r2": 0.3607329778373241,
+          "ci95": [
+            0.33580801412463185,
+            0.3862116905550162
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "plain",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.2
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 138112.0,
+            "cpu_p95_ms": 1.4485409999999999,
+            "gpu_p95_ms": 1.0199068,
+            "static_memory_mib": 0.5346946716308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        }
+      ]
+    },
+    {
+      "key": "zero_label_dropout_0_4",
+      "label": "Zero labels, 40%",
+      "condition": {
+        "regime": "zero_label",
+        "perturbation": "dropout",
+        "dropout_fraction": 0.4
+      },
+      "membership_unit": "One participant's six held-out outer session-group means; the family mean and its source interval are copied to both compiled and original points.",
+      "records": [
+        {
+          "point_id": "hdc_original",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "original",
+          "mean_r2": 0.16512559996917844,
+          "ci95": [
+            0.14295756854116917,
+            0.18547842322538297
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "hdc",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.4
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80854905,
+            "gpu_p95_ms": 3.00478425,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "hdc_compiled",
+          "family": "hdc",
+          "family_label": "HDC",
+          "implementation": "compiled",
+          "mean_r2": 0.16512559996917844,
+          "ci95": [
+            0.14295756854116917,
+            0.18547842322538297
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "hdc",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.4
+          },
+          "accuracy_inherited_from": "hdc_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 2.1600967499999997,
+            "gpu_p95_ms": 2.35787195,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_original",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "original",
+          "mean_r2": 0.13383996414680344,
+          "ci95": [
+            0.1070102015704227,
+            0.16282023622964817
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "random",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.4
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 1688448.0,
+            "cpu_p95_ms": 2.80165065,
+            "gpu_p95_ms": 2.90189965,
+            "static_memory_mib": 6.450740814208984
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "random_compiled",
+          "family": "random",
+          "family_label": "Random projection",
+          "implementation": "compiled",
+          "mean_r2": 0.13383996414680344,
+          "ci95": [
+            0.1070102015704227,
+            0.16282023622964817
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "random",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.4
+          },
+          "accuracy_inherited_from": "random_original",
+          "costs": {
+            "mac_equivalents_per_bin": 160640.0,
+            "cpu_p95_ms": 1.8994041,
+            "gpu_p95_ms": 2.4726585,
+            "static_memory_mib": 1.1343040466308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "mlp_original",
+          "family": "mlp",
+          "family_label": "MLP features",
+          "implementation": "original",
+          "mean_r2": 0.1450918163172901,
+          "ci95": [
+            0.12173362215980889,
+            0.16680430077637234
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "mlp",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.4
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 246144.0,
+            "cpu_p95_ms": 1.53474505,
+            "gpu_p95_ms": 2.0945420500000003,
+            "static_memory_mib": 0.9764251708984375
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        },
+        {
+          "point_id": "plain_original",
+          "family": "plain",
+          "family_label": "Plain GRU",
+          "implementation": "original",
+          "mean_r2": 0.14456863772744935,
+          "ci95": [
+            0.12071843097607293,
+            0.16711045758177837
+          ],
+          "score_source": "summary.robustness",
+          "source_record": {
+            "family": "plain",
+            "regime": "zero_label",
+            "perturbation": "dropout",
+            "level": 0.4
+          },
+          "accuracy_inherited_from": null,
+          "costs": {
+            "mac_equivalents_per_bin": 138112.0,
+            "cpu_p95_ms": 1.4485409999999999,
+            "gpu_p95_ms": 1.0199068,
+            "static_memory_mib": 0.5346946716308594
+          },
+          "cost_units": {
+            "mac_equivalents_per_bin": "MAC-equivalents/bin",
+            "cpu_p95_ms": "ms/call",
+            "gpu_p95_ms": "ms/call",
+            "static_memory_mib": "MiB"
+          }
+        }
+      ]
+    }
+  ],
+  "frontiers": {
+    "primary_few_shot": {
+      "mac_equivalents_per_bin": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.4442172944545746,
+            "ci95": [
+              0.4124511167407036,
+              0.4687949409087499
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.4442172944545746,
+            "ci95": [
+              0.4124511167407036,
+              0.4687949409087499
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.392081727584203,
+            "ci95": [
+              0.36038990567127865,
+              0.41779146740833917
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.392081727584203,
+            "ci95": [
+              0.36038990567127865,
+              0.41779146740833917
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.5764450192451477,
+            "ci95": [
+              0.5470432271560034,
+              0.6015510002772013
+            ],
+            "cost": 246144.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.6414435615142186,
+            "ci95": [
+              0.5975713001936673,
+              0.676653955380122
+            ],
+            "cost": 138112.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "cpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.4442172944545746,
+            "ci95": [
+              0.4124511167407036,
+              0.4687949409087499
+            ],
+            "cost": 2.80854905,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.4442172944545746,
+            "ci95": [
+              0.4124511167407036,
+              0.4687949409087499
+            ],
+            "cost": 2.1600967499999997,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.392081727584203,
+            "ci95": [
+              0.36038990567127865,
+              0.41779146740833917
+            ],
+            "cost": 2.80165065,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.392081727584203,
+            "ci95": [
+              0.36038990567127865,
+              0.41779146740833917
+            ],
+            "cost": 1.8994041,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.5764450192451477,
+            "ci95": [
+              0.5470432271560034,
+              0.6015510002772013
+            ],
+            "cost": 1.53474505,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.6414435615142186,
+            "ci95": [
+              0.5975713001936673,
+              0.676653955380122
+            ],
+            "cost": 1.4485409999999999,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "gpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.4442172944545746,
+            "ci95": [
+              0.4124511167407036,
+              0.4687949409087499
+            ],
+            "cost": 3.00478425,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.4442172944545746,
+            "ci95": [
+              0.4124511167407036,
+              0.4687949409087499
+            ],
+            "cost": 2.35787195,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.392081727584203,
+            "ci95": [
+              0.36038990567127865,
+              0.41779146740833917
+            ],
+            "cost": 2.90189965,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.392081727584203,
+            "ci95": [
+              0.36038990567127865,
+              0.41779146740833917
+            ],
+            "cost": 2.4726585,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.5764450192451477,
+            "ci95": [
+              0.5470432271560034,
+              0.6015510002772013
+            ],
+            "cost": 2.0945420500000003,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.6414435615142186,
+            "ci95": [
+              0.5975713001936673,
+              0.676653955380122
+            ],
+            "cost": 1.0199068,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "static_memory_mib": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.4442172944545746,
+            "ci95": [
+              0.4124511167407036,
+              0.4687949409087499
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.4442172944545746,
+            "ci95": [
+              0.4124511167407036,
+              0.4687949409087499
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.392081727584203,
+            "ci95": [
+              0.36038990567127865,
+              0.41779146740833917
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.392081727584203,
+            "ci95": [
+              0.36038990567127865,
+              0.41779146740833917
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.5764450192451477,
+            "ci95": [
+              0.5470432271560034,
+              0.6015510002772013
+            ],
+            "cost": 0.9764251708984375,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.6414435615142186,
+            "ci95": [
+              0.5975713001936673,
+              0.676653955380122
+            ],
+            "cost": 0.5346946716308594,
+            "cost_unit": "MiB",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      }
+    },
+    "zero_label_dropout_0": {
+      "mac_equivalents_per_bin": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.4216769759853681,
+            "ci95": [
+              0.3882237027088801,
+              0.4508972858389218
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.4216769759853681,
+            "ci95": [
+              0.3882237027088801,
+              0.4508972858389218
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.3734406361977259,
+            "ci95": [
+              0.3423696994781494,
+              0.3999273538589478
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.3734406361977259,
+            "ci95": [
+              0.3423696994781494,
+              0.3999273538589478
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.5548221399386724,
+            "ci95": [
+              0.5246061503887177,
+              0.5830465972423553
+            ],
+            "cost": 246144.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.6233123456438383,
+            "ci95": [
+              0.5748974834879239,
+              0.6605583633482451
+            ],
+            "cost": 138112.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "cpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.4216769759853681,
+            "ci95": [
+              0.3882237027088801,
+              0.4508972858389218
+            ],
+            "cost": 2.80854905,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.4216769759853681,
+            "ci95": [
+              0.3882237027088801,
+              0.4508972858389218
+            ],
+            "cost": 2.1600967499999997,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.3734406361977259,
+            "ci95": [
+              0.3423696994781494,
+              0.3999273538589478
+            ],
+            "cost": 2.80165065,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.3734406361977259,
+            "ci95": [
+              0.3423696994781494,
+              0.3999273538589478
+            ],
+            "cost": 1.8994041,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.5548221399386724,
+            "ci95": [
+              0.5246061503887177,
+              0.5830465972423553
+            ],
+            "cost": 1.53474505,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.6233123456438383,
+            "ci95": [
+              0.5748974834879239,
+              0.6605583633482451
+            ],
+            "cost": 1.4485409999999999,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "gpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.4216769759853681,
+            "ci95": [
+              0.3882237027088801,
+              0.4508972858389218
+            ],
+            "cost": 3.00478425,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.4216769759853681,
+            "ci95": [
+              0.3882237027088801,
+              0.4508972858389218
+            ],
+            "cost": 2.35787195,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.3734406361977259,
+            "ci95": [
+              0.3423696994781494,
+              0.3999273538589478
+            ],
+            "cost": 2.90189965,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.3734406361977259,
+            "ci95": [
+              0.3423696994781494,
+              0.3999273538589478
+            ],
+            "cost": 2.4726585,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.5548221399386724,
+            "ci95": [
+              0.5246061503887177,
+              0.5830465972423553
+            ],
+            "cost": 2.0945420500000003,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.6233123456438383,
+            "ci95": [
+              0.5748974834879239,
+              0.6605583633482451
+            ],
+            "cost": 1.0199068,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "static_memory_mib": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.4216769759853681,
+            "ci95": [
+              0.3882237027088801,
+              0.4508972858389218
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.4216769759853681,
+            "ci95": [
+              0.3882237027088801,
+              0.4508972858389218
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.3734406361977259,
+            "ci95": [
+              0.3423696994781494,
+              0.3999273538589478
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.3734406361977259,
+            "ci95": [
+              0.3423696994781494,
+              0.3999273538589478
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.5548221399386724,
+            "ci95": [
+              0.5246061503887177,
+              0.5830465972423553
+            ],
+            "cost": 0.9764251708984375,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.6233123456438383,
+            "ci95": [
+              0.5748974834879239,
+              0.6605583633482451
+            ],
+            "cost": 0.5346946716308594,
+            "cost_unit": "MiB",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      }
+    },
+    "zero_label_dropout_0_1": {
+      "mac_equivalents_per_bin": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.3606510544816653,
+            "ci95": [
+              0.3327484220266343,
+              0.3885991329948108
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.3606510544816653,
+            "ci95": [
+              0.3327484220266343,
+              0.3885991329948108
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.3153443545103073,
+            "ci95": [
+              0.28911011641224227,
+              0.34086143299937244
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.3153443545103073,
+            "ci95": [
+              0.28911011641224227,
+              0.34086143299937244
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.43471907253066694,
+            "ci95": [
+              0.4152927172680696,
+              0.4621518730806807
+            ],
+            "cost": 246144.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.5123076019187768,
+            "ci95": [
+              0.4762816699842612,
+              0.5502199225127696
+            ],
+            "cost": 138112.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "cpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.3606510544816653,
+            "ci95": [
+              0.3327484220266343,
+              0.3885991329948108
+            ],
+            "cost": 2.80854905,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.3606510544816653,
+            "ci95": [
+              0.3327484220266343,
+              0.3885991329948108
+            ],
+            "cost": 2.1600967499999997,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.3153443545103073,
+            "ci95": [
+              0.28911011641224227,
+              0.34086143299937244
+            ],
+            "cost": 2.80165065,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.3153443545103073,
+            "ci95": [
+              0.28911011641224227,
+              0.34086143299937244
+            ],
+            "cost": 1.8994041,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.43471907253066694,
+            "ci95": [
+              0.4152927172680696,
+              0.4621518730806807
+            ],
+            "cost": 1.53474505,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.5123076019187768,
+            "ci95": [
+              0.4762816699842612,
+              0.5502199225127696
+            ],
+            "cost": 1.4485409999999999,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "gpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.3606510544816653,
+            "ci95": [
+              0.3327484220266343,
+              0.3885991329948108
+            ],
+            "cost": 3.00478425,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.3606510544816653,
+            "ci95": [
+              0.3327484220266343,
+              0.3885991329948108
+            ],
+            "cost": 2.35787195,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.3153443545103073,
+            "ci95": [
+              0.28911011641224227,
+              0.34086143299937244
+            ],
+            "cost": 2.90189965,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.3153443545103073,
+            "ci95": [
+              0.28911011641224227,
+              0.34086143299937244
+            ],
+            "cost": 2.4726585,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.43471907253066694,
+            "ci95": [
+              0.4152927172680696,
+              0.4621518730806807
+            ],
+            "cost": 2.0945420500000003,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.5123076019187768,
+            "ci95": [
+              0.4762816699842612,
+              0.5502199225127696
+            ],
+            "cost": 1.0199068,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "static_memory_mib": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.3606510544816653,
+            "ci95": [
+              0.3327484220266343,
+              0.3885991329948108
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.3606510544816653,
+            "ci95": [
+              0.3327484220266343,
+              0.3885991329948108
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.3153443545103073,
+            "ci95": [
+              0.28911011641224227,
+              0.34086143299937244
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.3153443545103073,
+            "ci95": [
+              0.28911011641224227,
+              0.34086143299937244
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.43471907253066694,
+            "ci95": [
+              0.4152927172680696,
+              0.4621518730806807
+            ],
+            "cost": 0.9764251708984375,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.5123076019187768,
+            "ci95": [
+              0.4762816699842612,
+              0.5502199225127696
+            ],
+            "cost": 0.5346946716308594,
+            "cost_unit": "MiB",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      }
+    },
+    "zero_label_dropout_0_2": {
+      "mac_equivalents_per_bin": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.28492470358808836,
+            "ci95": [
+              0.2594696345428626,
+              0.3087164580821991
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.28492470358808836,
+            "ci95": [
+              0.2594696345428626,
+              0.3087164580821991
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.25331407953053714,
+            "ci95": [
+              0.2347996442889174,
+              0.27612885795533654
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.25331407953053714,
+            "ci95": [
+              0.2347996442889174,
+              0.27612885795533654
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.32241590147217114,
+            "ci95": [
+              0.297723201662302,
+              0.35060510933399197
+            ],
+            "cost": 246144.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.3607329778373241,
+            "ci95": [
+              0.33580801412463185,
+              0.3862116905550162
+            ],
+            "cost": 138112.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "cpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.28492470358808836,
+            "ci95": [
+              0.2594696345428626,
+              0.3087164580821991
+            ],
+            "cost": 2.80854905,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.28492470358808836,
+            "ci95": [
+              0.2594696345428626,
+              0.3087164580821991
+            ],
+            "cost": 2.1600967499999997,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.25331407953053714,
+            "ci95": [
+              0.2347996442889174,
+              0.27612885795533654
+            ],
+            "cost": 2.80165065,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.25331407953053714,
+            "ci95": [
+              0.2347996442889174,
+              0.27612885795533654
+            ],
+            "cost": 1.8994041,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.32241590147217114,
+            "ci95": [
+              0.297723201662302,
+              0.35060510933399197
+            ],
+            "cost": 1.53474505,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.3607329778373241,
+            "ci95": [
+              0.33580801412463185,
+              0.3862116905550162
+            ],
+            "cost": 1.4485409999999999,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "gpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.28492470358808836,
+            "ci95": [
+              0.2594696345428626,
+              0.3087164580821991
+            ],
+            "cost": 3.00478425,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.28492470358808836,
+            "ci95": [
+              0.2594696345428626,
+              0.3087164580821991
+            ],
+            "cost": 2.35787195,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.25331407953053714,
+            "ci95": [
+              0.2347996442889174,
+              0.27612885795533654
+            ],
+            "cost": 2.90189965,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.25331407953053714,
+            "ci95": [
+              0.2347996442889174,
+              0.27612885795533654
+            ],
+            "cost": 2.4726585,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.32241590147217114,
+            "ci95": [
+              0.297723201662302,
+              0.35060510933399197
+            ],
+            "cost": 2.0945420500000003,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.3607329778373241,
+            "ci95": [
+              0.33580801412463185,
+              0.3862116905550162
+            ],
+            "cost": 1.0199068,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "static_memory_mib": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.28492470358808836,
+            "ci95": [
+              0.2594696345428626,
+              0.3087164580821991
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.28492470358808836,
+            "ci95": [
+              0.2594696345428626,
+              0.3087164580821991
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.25331407953053714,
+            "ci95": [
+              0.2347996442889174,
+              0.27612885795533654
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.25331407953053714,
+            "ci95": [
+              0.2347996442889174,
+              0.27612885795533654
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.32241590147217114,
+            "ci95": [
+              0.297723201662302,
+              0.35060510933399197
+            ],
+            "cost": 0.9764251708984375,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "plain_original"
+            ],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.3607329778373241,
+            "ci95": [
+              0.33580801412463185,
+              0.3862116905550162
+            ],
+            "cost": 0.5346946716308594,
+            "cost_unit": "MiB",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      }
+    },
+    "zero_label_dropout_0_4": {
+      "mac_equivalents_per_bin": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "hdc_compiled",
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.16512559996917844,
+            "ci95": [
+              0.14295756854116917,
+              0.18547842322538297
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.16512559996917844,
+            "ci95": [
+              0.14295756854116917,
+              0.18547842322538297
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_original",
+              "mlp_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.13383996414680344,
+            "ci95": [
+              0.1070102015704227,
+              0.16282023622964817
+            ],
+            "cost": 1688448.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.13383996414680344,
+            "ci95": [
+              0.1070102015704227,
+              0.16282023622964817
+            ],
+            "cost": 160640.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.1450918163172901,
+            "ci95": [
+              0.12173362215980889,
+              0.16680430077637234
+            ],
+            "cost": 246144.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.14456863772744935,
+            "ci95": [
+              0.12071843097607293,
+              0.16711045758177837
+            ],
+            "cost": 138112.0,
+            "cost_unit": "MAC-equivalents/bin",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "cpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "hdc_compiled",
+          "mlp_original",
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.16512559996917844,
+            "ci95": [
+              0.14295756854116917,
+              0.18547842322538297
+            ],
+            "cost": 2.80854905,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.16512559996917844,
+            "ci95": [
+              0.14295756854116917,
+              0.18547842322538297
+            ],
+            "cost": 2.1600967499999997,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_original",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.13383996414680344,
+            "ci95": [
+              0.1070102015704227,
+              0.16282023622964817
+            ],
+            "cost": 2.80165065,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.13383996414680344,
+            "ci95": [
+              0.1070102015704227,
+              0.16282023622964817
+            ],
+            "cost": 1.8994041,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.1450918163172901,
+            "ci95": [
+              0.12173362215980889,
+              0.16680430077637234
+            ],
+            "cost": 1.53474505,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.14456863772744935,
+            "ci95": [
+              0.12071843097607293,
+              0.16711045758177837
+            ],
+            "cost": 1.4485409999999999,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "gpu_p95_ms": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "hdc_compiled",
+          "mlp_original",
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.16512559996917844,
+            "ci95": [
+              0.14295756854116917,
+              0.18547842322538297
+            ],
+            "cost": 3.00478425,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.16512559996917844,
+            "ci95": [
+              0.14295756854116917,
+              0.18547842322538297
+            ],
+            "cost": 2.35787195,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.13383996414680344,
+            "ci95": [
+              0.1070102015704227,
+              0.16282023622964817
+            ],
+            "cost": 2.90189965,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.13383996414680344,
+            "ci95": [
+              0.1070102015704227,
+              0.16282023622964817
+            ],
+            "cost": 2.4726585,
+            "cost_unit": "ms/call",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.1450918163172901,
+            "ci95": [
+              0.12173362215980889,
+              0.16680430077637234
+            ],
+            "cost": 2.0945420500000003,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.14456863772744935,
+            "ci95": [
+              0.12071843097607293,
+              0.16711045758177837
+            ],
+            "cost": 1.0199068,
+            "cost_unit": "ms/call",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      },
+      "static_memory_mib": {
+        "membership_basis": "Observed means only; descriptive intervals are retained but do not affect dominance.",
+        "rule": "A dominates B iff A.mean_r2 >= B.mean_r2 and A.cost <= B.cost, with at least one strict inequality. Equal-cost points can dominate on score; exact ties do not dominate.",
+        "frontier_point_ids": [
+          "hdc_compiled",
+          "mlp_original",
+          "plain_original"
+        ],
+        "records": [
+          {
+            "point_id": "hdc_original",
+            "family": "hdc",
+            "implementation": "original",
+            "mean_r2": 0.16512559996917844,
+            "ci95": [
+              0.14295756854116917,
+              0.18547842322538297
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "hdc_compiled",
+            "family": "hdc",
+            "implementation": "compiled",
+            "mean_r2": 0.16512559996917844,
+            "ci95": [
+              0.14295756854116917,
+              0.18547842322538297
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "hdc_original",
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "random_original",
+            "family": "random",
+            "implementation": "original",
+            "mean_r2": 0.13383996414680344,
+            "ci95": [
+              0.1070102015704227,
+              0.16282023622964817
+            ],
+            "cost": 6.450740814208984,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "hdc_original",
+              "mlp_original",
+              "plain_original",
+              "random_compiled"
+            ],
+            "dominates": []
+          },
+          {
+            "point_id": "random_compiled",
+            "family": "random",
+            "implementation": "compiled",
+            "mean_r2": 0.13383996414680344,
+            "ci95": [
+              0.1070102015704227,
+              0.16282023622964817
+            ],
+            "cost": 1.1343040466308594,
+            "cost_unit": "MiB",
+            "frontier": false,
+            "dominated_by": [
+              "hdc_compiled",
+              "mlp_original",
+              "plain_original"
+            ],
+            "dominates": [
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "mlp_original",
+            "family": "mlp",
+            "implementation": "original",
+            "mean_r2": 0.1450918163172901,
+            "ci95": [
+              0.12173362215980889,
+              0.16680430077637234
+            ],
+            "cost": 0.9764251708984375,
+            "cost_unit": "MiB",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "random_compiled",
+              "random_original"
+            ]
+          },
+          {
+            "point_id": "plain_original",
+            "family": "plain",
+            "implementation": "original",
+            "mean_r2": 0.14456863772744935,
+            "ci95": [
+              0.12071843097607293,
+              0.16711045758177837
+            ],
+            "cost": 0.5346946716308594,
+            "cost_unit": "MiB",
+            "frontier": true,
+            "dominated_by": [],
+            "dominates": [
+              "random_compiled",
+              "random_original"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "figure_files_sha256": {
+    "hdc_study/figures/fig5_pareto.pdf": "c03ba9f312e4bd9110d3d75cb10b9d0414247f48dfe7d5536306c10eda01ac53",
+    "hdc_study/figures/fig5_pareto.eps": "408b2d43ee6148879befaf34641ea8620da6ea79f845e6d379af872ebcf435c5",
+    "hdc_study/figures/fig5_pareto.svg": "d460bf0e378cc7f0dad996cffe693b0b29f69dd599a182fa2a09cbfc2771d900",
+    "hdc_study/figures/previews/fig5_pareto.png": "2cae93620db1043f7efd614c3f76c3d5d88fdd1c0a6d08701b4539c9032d45ec",
+    "neuroinformatics_submission/Fig5.pdf": "c03ba9f312e4bd9110d3d75cb10b9d0414247f48dfe7d5536306c10eda01ac53",
+    "neuroinformatics_submission/Fig5.eps": "408b2d43ee6148879befaf34641ea8620da6ea79f845e6d379af872ebcf435c5"
+  },
+  "generated_tex_sha256": "9eb11cfc8453c1c7d3a186f8ccecf33395705db2411f3819823bd570c6c957e3",
+  "generator_sha256": "18e85bc276d847992a3b9d6e37a0e8f9ccecae28ec87ad39a5cadb12e0305145"
+}

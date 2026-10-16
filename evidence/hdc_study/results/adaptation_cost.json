@@ -1,0 +1,916 @@
+{
+  "accounting_assumptions": {
+    "activation_or_workspace_bytes_included": false,
+    "adamw_moment_dtypes": [
+      "float32",
+      "float32"
+    ],
+    "adamw_moments_per_parameter": 2,
+    "all_trainable_adaptation_is_hypothetical": true,
+    "bytes_per_fp32_value": 4,
+    "fixed_codebooks_are_trainable": false,
+    "gradient_dtype": "float32",
+    "mib_bytes": 1048576,
+    "parameter_dtype": "float32",
+    "readout_only_policy_applies_to_all_families": true,
+    "step_scalars_included": false
+  },
+  "calibration_source": {
+    "backward_and_optimizer_step_present": true,
+    "default_steps": 20,
+    "learning_rate": 0.0001,
+    "loss": "Huber loss",
+    "optimizer": "AdamW(model.readout.parameters())",
+    "source": "hdc_study/engine.py::calibrate",
+    "updates_only_readout": true,
+    "weight_decay": 0.0001
+  },
+  "compilation_compatibility": {
+    "compiled_calibration_runtime_evaluated": false,
+    "fusion_dependencies": [
+      "fixed HDC basis and K=1 temporal role",
+      "trained input projection weight and bias"
+    ],
+    "projection_update_requires_rebuild": true,
+    "readout_only_update_changes_fusion_dependencies": false,
+    "readout_only_update_preserves_compiled_lookup": true,
+    "selected_hdc_temporal_bins": 1
+  },
+  "families": {
+    "hdc": {
+      "all_trainable_parameters_hypothetical_accounting": {
+        "fp32_adamw_first_and_second_moment_bytes": 1985592,
+        "fp32_gradient_bytes": 992796,
+        "fp32_weight_bytes": 992796,
+        "parameter_gradient_and_moment_subtotal_bytes": 3971184,
+        "parameters": 248199
+      },
+      "basis_gradient_enabled": false,
+      "config": {
+        "amp": false,
+        "batch": 256,
+        "channels": 176,
+        "codebook_seed": 90210,
+        "dimension": 512,
+        "dropout": 0.2,
+        "epochs": 50,
+        "family": "hdc",
+        "hidden": 128,
+        "levels": 8,
+        "lr": 0.0002,
+        "no_channel_roles": false,
+        "no_roles": false,
+        "online_norm": true,
+        "outputs": 7,
+        "recurrence": true,
+        "smoothing": 0.9,
+        "stride": 64,
+        "temporal_bins": 1,
+        "weight_decay": 0.0001,
+        "window": 256
+      },
+      "parameter_blocks": {
+        "gru": 99072,
+        "input_norm": 256,
+        "input_projection": 131200,
+        "readout": 17415,
+        "state_norm": 256
+      },
+      "parameter_count_from_selection": 248199,
+      "parameter_tensors": [
+        {
+          "dtype": "float32",
+          "name": "input_projection.weight",
+          "numel": 131072,
+          "shape": [
+            128,
+            1024
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_projection.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_norm.weight",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_norm.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.weight_ih_l0",
+          "numel": 49152,
+          "shape": [
+            384,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.weight_hh_l0",
+          "numel": 49152,
+          "shape": [
+            384,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.bias_ih_l0",
+          "numel": 384,
+          "shape": [
+            384
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.bias_hh_l0",
+          "numel": 384,
+          "shape": [
+            384
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "state_norm.weight",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "state_norm.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.0.weight",
+          "numel": 16384,
+          "shape": [
+            128,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.0.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.3.weight",
+          "numel": 896,
+          "shape": [
+            7,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.3.bias",
+          "numel": 7,
+          "shape": [
+            7
+          ]
+        }
+      ],
+      "readout_only_calibration_accounting": {
+        "fp32_adamw_first_and_second_moment_bytes": 139320,
+        "fp32_gradient_bytes": 69660,
+        "fp32_weight_bytes": 69660,
+        "parameter_gradient_and_moment_subtotal_bytes": 278640,
+        "parameters": 17415
+      },
+      "registered_static_buffer_bytes": 5771296,
+      "registered_static_buffer_mib": 5.503936767578125,
+      "selected_key": "hdc_d512_k1_lr0.0002",
+      "static_buffer_blocks_bytes": {
+        "basis_matrix": 5767168,
+        "encoder_other": 0,
+        "temporal_roles": 4096,
+        "value_anchors": 32
+      },
+      "static_buffer_tensors": [
+        {
+          "bytes": 32,
+          "dtype": "float32",
+          "name": "encoder.anchors",
+          "numel": 8,
+          "shape": [
+            8
+          ]
+        },
+        {
+          "bytes": 5767168,
+          "dtype": "float32",
+          "name": "encoder.basis_matrix",
+          "numel": 1441792,
+          "shape": [
+            1408,
+            1024
+          ]
+        },
+        {
+          "bytes": 2048,
+          "dtype": "float32",
+          "name": "bundler.role_real",
+          "numel": 512,
+          "shape": [
+            1,
+            512
+          ]
+        },
+        {
+          "bytes": 2048,
+          "dtype": "float32",
+          "name": "bundler.role_imag",
+          "numel": 512,
+          "shape": [
+            1,
+            512
+          ]
+        }
+      ],
+      "temporal_roles_used_by_forward": true,
+      "trainable_parameter_count_from_model": 248199
+    },
+    "mlp": {
+      "all_trainable_parameters_hypothetical_accounting": {
+        "fp32_adamw_first_and_second_moment_bytes": 1982176,
+        "fp32_gradient_bytes": 991088,
+        "fp32_weight_bytes": 991088,
+        "parameter_gradient_and_moment_subtotal_bytes": 3964352,
+        "parameters": 247772
+      },
+      "basis_gradient_enabled": false,
+      "config": {
+        "amp": false,
+        "batch": 256,
+        "channels": 176,
+        "codebook_seed": 90210,
+        "dimension": 512,
+        "dropout": 0.2,
+        "epochs": 50,
+        "family": "mlp",
+        "hidden": 128,
+        "levels": 8,
+        "lr": 0.0002,
+        "no_channel_roles": false,
+        "no_roles": false,
+        "online_norm": true,
+        "outputs": 7,
+        "recurrence": true,
+        "smoothing": 0.9,
+        "stride": 64,
+        "temporal_bins": 8,
+        "weight_decay": 0.0001,
+        "window": 256
+      },
+      "parameter_blocks": {
+        "gru": 99072,
+        "input_norm": 256,
+        "input_projection": 130773,
+        "readout": 17415,
+        "state_norm": 256
+      },
+      "parameter_count_from_selection": 247772,
+      "parameter_tensors": [
+        {
+          "dtype": "float32",
+          "name": "input_projection.0.weight",
+          "numel": 119680,
+          "shape": [
+            85,
+            1408
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_projection.0.bias",
+          "numel": 85,
+          "shape": [
+            85
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_projection.2.weight",
+          "numel": 10880,
+          "shape": [
+            128,
+            85
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_projection.2.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_norm.weight",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_norm.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.weight_ih_l0",
+          "numel": 49152,
+          "shape": [
+            384,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.weight_hh_l0",
+          "numel": 49152,
+          "shape": [
+            384,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.bias_ih_l0",
+          "numel": 384,
+          "shape": [
+            384
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.bias_hh_l0",
+          "numel": 384,
+          "shape": [
+            384
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "state_norm.weight",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "state_norm.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.0.weight",
+          "numel": 16384,
+          "shape": [
+            128,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.0.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.3.weight",
+          "numel": 896,
+          "shape": [
+            7,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.3.bias",
+          "numel": 7,
+          "shape": [
+            7
+          ]
+        }
+      ],
+      "readout_only_calibration_accounting": {
+        "fp32_adamw_first_and_second_moment_bytes": 139320,
+        "fp32_gradient_bytes": 69660,
+        "fp32_weight_bytes": 69660,
+        "parameter_gradient_and_moment_subtotal_bytes": 278640,
+        "parameters": 17415
+      },
+      "registered_static_buffer_bytes": 32768,
+      "registered_static_buffer_mib": 0.03125,
+      "selected_key": "mlp_d512_k8_lr0.0002",
+      "static_buffer_blocks_bytes": {
+        "basis_matrix": 0,
+        "encoder_other": 0,
+        "temporal_roles": 32768,
+        "value_anchors": 0
+      },
+      "static_buffer_tensors": [
+        {
+          "bytes": 16384,
+          "dtype": "float32",
+          "name": "bundler.role_real",
+          "numel": 4096,
+          "shape": [
+            8,
+            512
+          ]
+        },
+        {
+          "bytes": 16384,
+          "dtype": "float32",
+          "name": "bundler.role_imag",
+          "numel": 4096,
+          "shape": [
+            8,
+            512
+          ]
+        }
+      ],
+      "temporal_roles_used_by_forward": false,
+      "trainable_parameter_count_from_model": 247772
+    },
+    "plain": {
+      "all_trainable_parameters_hypothetical_accounting": {
+        "fp32_adamw_first_and_second_moment_bytes": 1117240,
+        "fp32_gradient_bytes": 558620,
+        "fp32_weight_bytes": 558620,
+        "parameter_gradient_and_moment_subtotal_bytes": 2234480,
+        "parameters": 139655
+      },
+      "basis_gradient_enabled": false,
+      "config": {
+        "amp": false,
+        "batch": 256,
+        "channels": 176,
+        "codebook_seed": 90210,
+        "dimension": 256,
+        "dropout": 0.2,
+        "epochs": 50,
+        "family": "plain",
+        "hidden": 128,
+        "levels": 8,
+        "lr": 0.0008,
+        "no_channel_roles": false,
+        "no_roles": false,
+        "online_norm": true,
+        "outputs": 7,
+        "recurrence": true,
+        "smoothing": 0.9,
+        "stride": 64,
+        "temporal_bins": 1,
+        "weight_decay": 0.0001,
+        "window": 256
+      },
+      "parameter_blocks": {
+        "gru": 99072,
+        "input_norm": 256,
+        "input_projection": 22656,
+        "readout": 17415,
+        "state_norm": 256
+      },
+      "parameter_count_from_selection": 139655,
+      "parameter_tensors": [
+        {
+          "dtype": "float32",
+          "name": "input_projection.weight",
+          "numel": 22528,
+          "shape": [
+            128,
+            176
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_projection.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_norm.weight",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_norm.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.weight_ih_l0",
+          "numel": 49152,
+          "shape": [
+            384,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.weight_hh_l0",
+          "numel": 49152,
+          "shape": [
+            384,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.bias_ih_l0",
+          "numel": 384,
+          "shape": [
+            384
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.bias_hh_l0",
+          "numel": 384,
+          "shape": [
+            384
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "state_norm.weight",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "state_norm.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.0.weight",
+          "numel": 16384,
+          "shape": [
+            128,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.0.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.3.weight",
+          "numel": 896,
+          "shape": [
+            7,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.3.bias",
+          "numel": 7,
+          "shape": [
+            7
+          ]
+        }
+      ],
+      "readout_only_calibration_accounting": {
+        "fp32_adamw_first_and_second_moment_bytes": 139320,
+        "fp32_gradient_bytes": 69660,
+        "fp32_weight_bytes": 69660,
+        "parameter_gradient_and_moment_subtotal_bytes": 278640,
+        "parameters": 17415
+      },
+      "registered_static_buffer_bytes": 2048,
+      "registered_static_buffer_mib": 0.001953125,
+      "selected_key": "plain_d256_k1_lr0.0008",
+      "static_buffer_blocks_bytes": {
+        "basis_matrix": 0,
+        "encoder_other": 0,
+        "temporal_roles": 2048,
+        "value_anchors": 0
+      },
+      "static_buffer_tensors": [
+        {
+          "bytes": 1024,
+          "dtype": "float32",
+          "name": "bundler.role_real",
+          "numel": 256,
+          "shape": [
+            1,
+            256
+          ]
+        },
+        {
+          "bytes": 1024,
+          "dtype": "float32",
+          "name": "bundler.role_imag",
+          "numel": 256,
+          "shape": [
+            1,
+            256
+          ]
+        }
+      ],
+      "temporal_roles_used_by_forward": false,
+      "trainable_parameter_count_from_model": 139655
+    },
+    "random": {
+      "all_trainable_parameters_hypothetical_accounting": {
+        "fp32_adamw_first_and_second_moment_bytes": 1985592,
+        "fp32_gradient_bytes": 992796,
+        "fp32_weight_bytes": 992796,
+        "parameter_gradient_and_moment_subtotal_bytes": 3971184,
+        "parameters": 248199
+      },
+      "basis_gradient_enabled": false,
+      "config": {
+        "amp": false,
+        "batch": 256,
+        "channels": 176,
+        "codebook_seed": 90210,
+        "dimension": 512,
+        "dropout": 0.2,
+        "epochs": 50,
+        "family": "random",
+        "hidden": 128,
+        "levels": 8,
+        "lr": 0.0002,
+        "no_channel_roles": false,
+        "no_roles": false,
+        "online_norm": true,
+        "outputs": 7,
+        "recurrence": true,
+        "smoothing": 0.9,
+        "stride": 64,
+        "temporal_bins": 1,
+        "weight_decay": 0.0001,
+        "window": 256
+      },
+      "parameter_blocks": {
+        "gru": 99072,
+        "input_norm": 256,
+        "input_projection": 131200,
+        "readout": 17415,
+        "state_norm": 256
+      },
+      "parameter_count_from_selection": 248199,
+      "parameter_tensors": [
+        {
+          "dtype": "float32",
+          "name": "input_projection.weight",
+          "numel": 131072,
+          "shape": [
+            128,
+            1024
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_projection.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_norm.weight",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "input_norm.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.weight_ih_l0",
+          "numel": 49152,
+          "shape": [
+            384,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.weight_hh_l0",
+          "numel": 49152,
+          "shape": [
+            384,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.bias_ih_l0",
+          "numel": 384,
+          "shape": [
+            384
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "gru.bias_hh_l0",
+          "numel": 384,
+          "shape": [
+            384
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "state_norm.weight",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "state_norm.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.0.weight",
+          "numel": 16384,
+          "shape": [
+            128,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.0.bias",
+          "numel": 128,
+          "shape": [
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.3.weight",
+          "numel": 896,
+          "shape": [
+            7,
+            128
+          ]
+        },
+        {
+          "dtype": "float32",
+          "name": "readout.3.bias",
+          "numel": 7,
+          "shape": [
+            7
+          ]
+        }
+      ],
+      "readout_only_calibration_accounting": {
+        "fp32_adamw_first_and_second_moment_bytes": 139320,
+        "fp32_gradient_bytes": 69660,
+        "fp32_weight_bytes": 69660,
+        "parameter_gradient_and_moment_subtotal_bytes": 278640,
+        "parameters": 17415
+      },
+      "registered_static_buffer_bytes": 5771296,
+      "registered_static_buffer_mib": 5.503936767578125,
+      "selected_key": "random_d512_k1_lr0.0002",
+      "static_buffer_blocks_bytes": {
+        "basis_matrix": 5767168,
+        "encoder_other": 0,
+        "temporal_roles": 4096,
+        "value_anchors": 32
+      },
+      "static_buffer_tensors": [
+        {
+          "bytes": 32,
+          "dtype": "float32",
+          "name": "encoder.anchors",
+          "numel": 8,
+          "shape": [
+            8
+          ]
+        },
+        {
+          "bytes": 5767168,
+          "dtype": "float32",
+          "name": "encoder.basis_matrix",
+          "numel": 1441792,
+          "shape": [
+            1408,
+            1024
+          ]
+        },
+        {
+          "bytes": 2048,
+          "dtype": "float32",
+          "name": "bundler.role_real",
+          "numel": 512,
+          "shape": [
+            1,
+            512
+          ]
+        },
+        {
+          "bytes": 2048,
+          "dtype": "float32",
+          "name": "bundler.role_imag",
+          "numel": 512,
+          "shape": [
+            1,
+            512
+          ]
+        }
+      ],
+      "temporal_roles_used_by_forward": true,
+      "trainable_parameter_count_from_model": 248199
+    }
+  },
+  "inference_and_deployment_scope": {
+    "latency_or_energy_measurements_in_this_artifact": false,
+    "on_device_training_demonstrated": false,
+    "scored_inference_weight_updates": "none for all four families",
+    "submission_adapter_performs_online_weight_updates": false,
+    "zero_label_condition_available_for_all_families": true
+  },
+  "model_source": "hdc_study/model.py",
+  "purpose": "CPU-instantiated exact parameter and static-buffer accounting plus analytic FP32 AdamW-state arithmetic; no fitting, timing, or full-model adaptation run.",
+  "schema": 1,
+  "selection_source": "hdc_study/results/transfer_selection.json",
+  "source_hashes": {
+    "adaptation_cost.py": "460f6912dec0004198931be04570f9341e8c1bd240bff9bb5fa9b2f17fd6b351",
+    "adaptation_generated.tex": "bd66695c06356ba0a680fc5237bb7b59fcbc13154794939b06f8bd11377e6a0e",
+    "adapter.py": "f0a0123e2e460d1297226d8ce0bbbc7fe8910c9847d8c1f409d97fffc598db55",
+    "efficiency.py": "d2c7513b85460807830fe43e7a7ba6d7026d213102a415c40c8f97bf76534e6f",
+    "engine.py": "6eadcef7128d738bb9bf2d329a7c840576df0b05fcf69f843206c1e0b6e3bce8",
+    "model.py": "9ffe4c9a1d5211c9ab6e3c4f4f2c004491238fabee71de49edd791e26439fc52",
+    "transfer_selection.json": "b6572304a225bc9e08ac8e34926367c155314149276394646cf3d72acbd4e1f6"
+  }
+}

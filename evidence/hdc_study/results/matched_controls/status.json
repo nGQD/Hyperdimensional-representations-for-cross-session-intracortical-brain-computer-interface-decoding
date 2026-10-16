@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-10-16T01:08:09Z",
+  "state": "complete",
+  "workers": 3,
+  "primary_protocol_sha256": "6862e05b0cbc1c8bdd63a5689d3e8449ae5302e6c20963e599381e4604e29f48",
+  "capacity_protocol_sha256": "a58b96b255c0a532963c7457f6d3dc60326231d2f37e978b3b7b486c529acb98",
+  "completed": 120,
+  "expected": 120,
+  "family_counts": {
+    "random": 60,
+    "mlp": 60
+  },
+  "active_jobs": []
+}

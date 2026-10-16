@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it and the accompanying study."
+title: "Hyperdimensional representations for cross-session intracortical brain-computer interface decoding"
+authors:
+  - family-names: Ng
+    given-names: Qi Ding
+    affiliation: Faculty of Computer Science and Information Technology, Universiti Malaya, Kuala Lumpur 50603, Malaysia
+  - family-names: Loo
+    given-names: Chu Kiong
+    email: ckloo.um@um.edu.my
+    affiliation: Faculty of Computer Science and Information Technology, Universiti Malaya, Kuala Lumpur 50603, Malaysia
+  - family-names: Eshraghian
+    given-names: Jason K.
+    affiliation: Department of Electrical and Computer Engineering, University of California Santa Cruz, Santa Cruz, CA 95064, USA
+repository-code: "https://github.com/nGQD/Hyperdimensional-representations-for-cross-session-intracortical-brain-computer-interface-decoding"
+license: "AGPL-3.0-only"

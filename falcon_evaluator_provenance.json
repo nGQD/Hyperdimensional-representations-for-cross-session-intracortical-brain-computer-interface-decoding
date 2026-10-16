@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "locally_modified": false,
+      "path": "LICENSE",
+      "upstream_sha256": "c7e65defeceb6fe50d698299831394a783f507519bd8d209978cf3e2c8eed59b",
+      "vendored_sha256": "c7e65defeceb6fe50d698299831394a783f507519bd8d209978cf3e2c8eed59b"
+    },
+    {
+      "locally_modified": false,
+      "path": "falcon_challenge/__init__.py",
+      "upstream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vendored_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "locally_modified": false,
+      "path": "falcon_challenge/config.py",
+      "upstream_sha256": "3565e4449b7fc1f55a57e7c202083bfc6094ba55e37df2956851b7865a1c6ca9",
+      "vendored_sha256": "3565e4449b7fc1f55a57e7c202083bfc6094ba55e37df2956851b7865a1c6ca9"
+    },
+    {
+      "locally_modified": false,
+      "path": "falcon_challenge/interface.py",
+      "upstream_sha256": "781dae89351d2c5e5914c8c9b47654254edd4f5a308a3bda85b4d91a755063e6",
+      "vendored_sha256": "781dae89351d2c5e5914c8c9b47654254edd4f5a308a3bda85b4d91a755063e6"
+    },
+    {
+      "locally_modified": true,
+      "path": "falcon_challenge/dataloaders.py",
+      "upstream_sha256": "7638d839ec2085c7dde71ec9ca9676cbf1256c79fdcb327c4ac6487bfe5c9b05",
+      "vendored_sha256": "e741cf9ac8d53b69f10643c8bdd2748b0d472a4e0bc333a62436fed583771064"
+    },
+    {
+      "locally_modified": false,
+      "path": "falcon_challenge/evaluator.py",
+      "upstream_sha256": "2b848f84ef620eac82ce53d331d03727d9ae4ea9a5f2e5edb6e6557537ce4418",
+      "vendored_sha256": "2b848f84ef620eac82ce53d331d03727d9ae4ea9a5f2e5edb6e6557537ce4418"
+    }
+  ],
+  "license": "MIT",
+  "license_file": "falcon-challenge/LICENSE",
+  "local_patch_file": "falcon-challenge/falcon_challenge/LOCAL_PATCH.diff",
+  "note": "Vendored files preserve the exact local bytes used by the study. The listed upstream commit is the FALCON base; LOCAL_PATCH.diff records vendored source changes relative to that commit.",
+  "upstream_commit": "27fde21b85b3c631daaa11f39b70992c12824081",
+  "upstream_repository": "https://github.com/nGQD/Falcon-BCI"
+}

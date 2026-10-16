@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "id": "outer_S4_plain_s139",
+  "day": "S4",
+  "family": "plain",
+  "seed": 139,
+  "protocol_sha256": "6862e05b0cbc1c8bdd63a5689d3e8449ae5302e6c20963e599381e4604e29f48",
+  "checkpoint_sha256": "09140fe63bccac75ccaf812c7c46a2e538e418452a126b3de8803182be2dd3d1",
+  "perturb_seed": 700139,
+  "calibration": [
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "prefix_seconds": 0,
+      "r2": 0.6160896420478821
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "prefix_seconds": 15,
+      "r2": 0.5915387272834778
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "prefix_seconds": 30,
+      "r2": 0.6006002426147461
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "prefix_seconds": 60,
+      "r2": 0.6177273392677307
+    }
+  ],
+  "robustness": [
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "perturbation": "gain",
+      "level": 0.0,
+      "r2": 0.6160896420478821
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "perturbation": "dropout",
+      "level": 0.0,
+      "r2": 0.6160896420478821
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "perturbation": "gain",
+      "level": 0.1,
+      "r2": 0.6263116002082825
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "perturbation": "gain",
+      "level": 0.2,
+      "r2": 0.6347289681434631
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "perturbation": "gain",
+      "level": 0.4,
+      "r2": 0.642444372177124
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "perturbation": "dropout",
+      "level": 0.1,
+      "r2": 0.5282490253448486
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "perturbation": "dropout",
+      "level": 0.2,
+      "r2": 0.402800977230072
+    },
+    {
+      "day": "S4",
+      "family": "plain",
+      "seed": 139,
+      "perturbation": "dropout",
+      "level": 0.4,
+      "r2": 0.291350781917572
+    }
+  ]
+}

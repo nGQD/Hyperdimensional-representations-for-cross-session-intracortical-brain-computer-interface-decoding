@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "fingerprint": {
+    "sources": {
+      "data.py": "136c3acbd895bac2d1b0c9309985826c4eec5f121cc04dc227e67288a82e7e61",
+      "model.py": "9ffe4c9a1d5211c9ab6e3c4f4f2c004491238fabee71de49edd791e26439fc52",
+      "engine.py": "6eadcef7128d738bb9bf2d329a7c840576df0b05fcf69f843206c1e0b6e3bce8",
+      "run.py": "8e6f045367936d9761a9529ad99d793c56e2b1e71ea59af359c954de47100739",
+      "validate.py": "e718ec9ad646915fa854aa9608c4c18fce9fb77d858944a8f7709317869c4248",
+      "adapter.py": "f0a0123e2e460d1297226d8ce0bbbc7fe8910c9847d8c1f409d97fffc598db55",
+      "check_model.py": "6c7ffd9526d030b59a54fdc17157498720ef94896745a2b3ef10d5816be09c46",
+      "check_adapter.py": "3f622806351be63b0e3d176321ae842bb0ef3f3c5ca7c8f480f95add9c04b640",
+      "falcon_challenge/config.py": "3565e4449b7fc1f55a57e7c202083bfc6094ba55e37df2956851b7865a1c6ca9",
+      "falcon_challenge/interface.py": "781dae89351d2c5e5914c8c9b47654254edd4f5a308a3bda85b4d91a755063e6",
+      "falcon_challenge/dataloaders.py": "e741cf9ac8d53b69f10643c8bdd2748b0d472a4e0bc333a62436fed583771064",
+      "falcon_challenge/evaluator.py": "2b848f84ef620eac82ce53d331d03727d9ae4ea9a5f2e5edb6e6557537ce4418"
+    },
+    "data_manifest_sha256": "cdca2d2da867a06e2883de6e47818409c21cfc98d1547e31cf956fb97387cf88"
+  },
+  "checks": {
+    "check_model.py": "All CPU HDC model checks passed.",
+    "check_adapter.py": "All CPU FALCON adapter checks passed.",
+    "source_and_masks": {
+      "files": 27,
+      "groups": 13,
+      "target_processing": "Exact official-loader arrays, no target smoothing or delay"
+    },
+    "causality_calibration_streaming": {
+      "device": "cuda",
+      "largest_streaming_error": 2.682209014892578e-07,
+      "calibrated_parameters": "Readout only; labels and neural inputs after prefix are irrelevant to adaptation"
+    },
+    "parameter_matching_metric": {
+      "D256_K1": {
+        "hdc": 182663,
+        "random": 182663,
+        "mlp": 182702
+      },
+      "D256_K8": {
+        "hdc": 182663,
+        "random": 182663,
+        "mlp": 183218
+      },
+      "D512_K1": {
+        "hdc": 248199,
+        "random": 248199,
+        "mlp": 248277
+      },
+      "D512_K8": {
+        "hdc": 248199,
+        "random": 248199,
+        "mlp": 247772
+      }
+    }
+  },
+  "elapsed_seconds": 21.921505212783813,
+  "torch_version": "2.5.1+cu124"
+}

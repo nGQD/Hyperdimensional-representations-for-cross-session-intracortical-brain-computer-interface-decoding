@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-16T00:53:26.246217+00:00",
+  "design_changed": false,
+  "reason": "Correct two HDC-source configuration checks that called a control-only helper. Use the existing HDC expected-config helper. Training, selection, model architecture, seeds, data, endpoints, and all 120 planned comparisons are unchanged.",
+  "primary_protocol_sha256": "6862e05b0cbc1c8bdd63a5689d3e8449ae5302e6c20963e599381e4604e29f48",
+  "capacity_protocol_sha256": "a58b96b255c0a532963c7457f6d3dc60326231d2f37e978b3b7b486c529acb98",
+  "original_module_sha256": "7d0b9d2350a7c5e893fd22566bce2c245bd6b1dc6942b36468dd82247c4c9691",
+  "corrected_module_sha256": "7f5cc26434b6491977074cb7e6b7ac749d77cbce139d10d9382efba02d8fa104",
+  "verifier_sha256": "64aa278a68e197f6233f7e50a9f794d8b4af981b52f831619877b5658427fa25",
+  "primary_fits_complete_at_correction": 1840,
+  "matched_comparisons_complete_at_correction": 0,
+  "replacements": [
+    {
+      "old": "from model import Config, Decoder\n",
+      "new": "from model import Config, Decoder\nfrom control_implementation import verify_control_implementation\n",
+      "count": 1
+    },
+    {
+      "old": "    module_sha = sha(Path(__file__))\n",
+      "new": "    module_sha = verify_control_implementation(ROOT)\n",
+      "count": 1
+    },
+    {
+      "old": "    if capacity.get(\"module_sha256\") != module_sha:\n        raise RuntimeError(\"Matched-control module differs from frozen capacity design\")\n",
+      "new": "",
+      "count": 1
+    },
+    {
+      "old": "matched_config(selected_hdc, \"hdc\", seed)",
+      "new": "_expected_config(Config(**selected_hdc), seed)",
+      "count": 2
+    }
+  ]
+}

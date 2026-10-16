@@ -1,0 +1,105 @@
+{
+  "complete": true,
+  "chosen_batch": 256,
+  "amp": false,
+  "rows": [
+    {
+      "family": "hdc",
+      "batch": 128,
+      "seconds": 6.90538831287995,
+      "seconds_per_epoch": 2.3013418537254133,
+      "peak_memory_gib": 1.093238353729248,
+      "parameters": 248199
+    },
+    {
+      "family": "random",
+      "batch": 128,
+      "seconds": 4.765354454051703,
+      "seconds_per_epoch": 1.587097580699871,
+      "peak_memory_gib": 1.0931682586669922,
+      "parameters": 248199
+    },
+    {
+      "family": "mlp",
+      "batch": 128,
+      "seconds": 2.1747552286833525,
+      "seconds_per_epoch": 0.7246537866691748,
+      "peak_memory_gib": 0.8429923057556152,
+      "parameters": 247772
+    },
+    {
+      "family": "plain",
+      "batch": 128,
+      "seconds": 2.164733629208058,
+      "seconds_per_epoch": 0.721327816757063,
+      "peak_memory_gib": 0.8219718933105469,
+      "parameters": 297351
+    },
+    {
+      "family": "hdc",
+      "batch": 256,
+      "seconds": 3.921156915836036,
+      "seconds_per_epoch": 1.3068098557802539,
+      "peak_memory_gib": 2.0949759483337402,
+      "parameters": 248199
+    },
+    {
+      "family": "random",
+      "batch": 256,
+      "seconds": 4.002699069213122,
+      "seconds_per_epoch": 1.3340136727007728,
+      "peak_memory_gib": 2.0949759483337402,
+      "parameters": 248199
+    },
+    {
+      "family": "mlp",
+      "batch": 256,
+      "seconds": 2.1436424939893186,
+      "seconds_per_epoch": 0.7143143728996316,
+      "peak_memory_gib": 1.5996432304382324,
+      "parameters": 247772
+    },
+    {
+      "family": "plain",
+      "batch": 256,
+      "seconds": 2.123738775961101,
+      "seconds_per_epoch": 0.7076605519590279,
+      "peak_memory_gib": 1.5577154159545898,
+      "parameters": 297351
+    },
+    {
+      "family": "hdc",
+      "batch": 512,
+      "seconds": 4.598863145336509,
+      "seconds_per_epoch": 1.5326495066595573,
+      "peak_memory_gib": 4.09375,
+      "parameters": 248199
+    },
+    {
+      "family": "random",
+      "batch": 512,
+      "seconds": 3.8161944816820323,
+      "seconds_per_epoch": 1.2717857756651938,
+      "peak_memory_gib": 4.09375,
+      "parameters": 248199
+    },
+    {
+      "family": "mlp",
+      "batch": 512,
+      "seconds": 2.5599236651323736,
+      "seconds_per_epoch": 0.8530309040409824,
+      "peak_memory_gib": 3.1083593368530273,
+      "parameters": 247772
+    },
+    {
+      "family": "plain",
+      "batch": 512,
+      "seconds": 2.579183920752257,
+      "seconds_per_epoch": 0.859508520613114,
+      "peak_memory_gib": 3.0259041786193848,
+      "parameters": 297351
+    }
+  ],
+  "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+  "note": "Three training epochs on four groups; no evaluation scores computed or used"
+}

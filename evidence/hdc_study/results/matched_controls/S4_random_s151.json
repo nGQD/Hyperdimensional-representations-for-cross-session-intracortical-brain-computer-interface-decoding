@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "id": "matched_S4_random_s151",
+  "day": "S4",
+  "family": "random",
+  "seed": 151,
+  "config": {
+    "family": "random",
+    "channels": 176,
+    "outputs": 7,
+    "hidden": 128,
+    "dimension": 512,
+    "temporal_bins": 1,
+    "levels": 8,
+    "codebook_seed": 100151,
+    "recurrence": true,
+    "online_norm": true,
+    "smoothing": 0.9,
+    "dropout": 0.2,
+    "epochs": 50,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "window": 256,
+    "stride": 64,
+    "batch": 256,
+    "amp": false,
+    "no_roles": false,
+    "no_channel_roles": false
+  },
+  "protocol_sha256": "6862e05b0cbc1c8bdd63a5689d3e8449ae5302e6c20963e599381e4604e29f48",
+  "capacity_protocol_sha256": "a58b96b255c0a532963c7457f6d3dc60326231d2f37e978b3b7b486c529acb98",
+  "matched_hdc_identifier": "outer_S4_hdc_s151",
+  "matched_hdc_config": {
+    "family": "hdc",
+    "channels": 176,
+    "outputs": 7,
+    "hidden": 128,
+    "dimension": 512,
+    "temporal_bins": 1,
+    "levels": 8,
+    "codebook_seed": 100151,
+    "recurrence": true,
+    "online_norm": true,
+    "smoothing": 0.9,
+    "dropout": 0.2,
+    "epochs": 50,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "window": 256,
+    "stride": 64,
+    "batch": 256,
+    "amp": false,
+    "no_roles": false,
+    "no_channel_roles": false
+  },
+  "checkpoint": {
+    "path": "checkpoints/outer_S4_random_s151.pt",
+    "sha256": "18618d6bbcedc82c6c6a3d63d520aac289f50317eb5a4071e67547b3a92be598"
+  },
+  "reused_identifier": "outer_S4_random_s151",
+  "predictions": {
+    "zero_shot": {
+      "path": "results/predictions/outer_S4_random_s151_zero_shot.npz",
+      "sha256": "73ba0214d98340a81dd29831cf4dc9f1e0e52d8cfe990adb455fbd68bdca2407"
+    },
+    "few_shot": {
+      "path": "results/predictions/outer_S4_random_s151_few_shot.npz",
+      "sha256": "8bbf7c63de24c6f2ffee4001cd384ebfeb2ff46216d477fd48ea686c2befc5a4"
+    }
+  },
+  "prediction_sha256": {
+    "zero_shot": "73ba0214d98340a81dd29831cf4dc9f1e0e52d8cfe990adb455fbd68bdca2407",
+    "few_shot": "8bbf7c63de24c6f2ffee4001cd384ebfeb2ff46216d477fd48ea686c2befc5a4"
+  },
+  "metrics": [
+    {
+      "day": "S4",
+      "r2": 0.3978483974933624,
+      "bins": 20217,
+      "regime": "zero_shot",
+      "calibration_bins": 0,
+      "score_start": 3256,
+      "perturbation": null,
+      "perturbation_level": 0
+    },
+    {
+      "day": "S4",
+      "r2": 0.3722122013568878,
+      "bins": 20217,
+      "regime": "few_shot",
+      "calibration_bins": 3000,
+      "score_start": 3256,
+      "perturbation": null,
+      "perturbation_level": 0
+    }
+  ],
+  "parameters": 248199,
+  "seconds": 88.12243216577917
+}

@@ -1,0 +1,13 @@
+{
+  "complete_results": false,
+  "generated_utc": "SOURCE_DATE_EPOCH",
+  "included_current_inputs": true,
+  "missing_allowlisted_inputs": [],
+  "release_blockers": [
+    "release_metadata.json status must be 'complete'",
+    "release_metadata.json needs author confirmation of final manuscript approval",
+    "release_metadata.json needs author-approved contribution statements for each author"
+  ],
+  "scope": "FALCON H1 only",
+  "status": "preparatory"
+}

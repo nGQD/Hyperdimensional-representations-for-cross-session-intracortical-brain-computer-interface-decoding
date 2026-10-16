@@ -1,0 +1,256 @@
+{
+  "assets": [
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250101T111740.nwb",
+      "session_group": "S0",
+      "sha256": "f8af652a31228f08b26ff8a7ecfd2a6bd05a345e368da8c98be649229f80adb2",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250101T112404.nwb",
+      "session_group": "S0",
+      "sha256": "b946c4cf49f00c2ea8f0051481765ed090294e3e1e5a035cc5716ad93aa052b2",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250108T110520.nwb",
+      "session_group": "S1",
+      "sha256": "8a09f6ead8a44776d2cee62850ff489bd16b1323799c986cad070dad784a2b83",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250108T111022.nwb",
+      "session_group": "S1",
+      "sha256": "9398f27c6164e84a379c4a0b8d40d8acf642659c175b9411d4573147881c0e68",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250108T111455.nwb",
+      "session_group": "S1",
+      "sha256": "3a093dd558a7c5b3dbb38eaa1bb1699742a4b865066a336e65c5fe3abdfdd861",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250113T120811.nwb",
+      "session_group": "S2",
+      "sha256": "477410e16b8c1ccfcb3caba9403169ec21ab8bee35c4846376bae781003c5f92",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250113T121303.nwb",
+      "session_group": "S2",
+      "sha256": "29d01954747e028dc8b91f82ece28ef11b95a1a33ab3a57e55eb5f967706419f",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250115T110633.nwb",
+      "session_group": "S3",
+      "sha256": "ed0760aaa946e42f8ad812d3aef7f5faf66b21b5f2804aa77574c7f7ee853451",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250115T111328.nwb",
+      "session_group": "S3",
+      "sha256": "022956ab01c8cb645e19327ba3457f2a065b30dd402bb4541e51c684d6a46e20",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250119T113543.nwb",
+      "session_group": "S4",
+      "sha256": "f176ad4e1221843a94b67f87e0676bbcb83b7b1f5e49a58b2ae1d85b30e445d6",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250119T114045.nwb",
+      "session_group": "S4",
+      "sha256": "a9548924522750f6217409a9797b37389d22c9a0fe3ef145b87343192ff7d6ac",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250120T115044.nwb",
+      "session_group": "S5",
+      "sha256": "34e0f0d229942516aec6148d2deaf0bbeabda3d10b86cd889fedf0563366c084",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-calib/sub-HumanPitt-held-in-calib_ses-19250120T115537.nwb",
+      "session_group": "S5",
+      "sha256": "df0ba7830d01e82b716d7a1eaac0b0400ebc84e8cbf0c9e2e047437a31c43e70",
+      "split": "held-in-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250101T111740.nwb",
+      "session_group": "S0",
+      "sha256": "a95585515b1a12a61603fb3170843351d2fb6551ba6e0456c483570b085e68f3",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250101T112404.nwb",
+      "session_group": "S0",
+      "sha256": "e3177a65ffad2d5472c05737e6ff71ef98879bfb744c55608bda18afb11efe60",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250108T110520.nwb",
+      "session_group": "S1",
+      "sha256": "99fb1997035c4f9b0dd0a97be093042f9b7cf10af55cb2a3dc83eea7e35b4d0e",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250108T111022.nwb",
+      "session_group": "S1",
+      "sha256": "0831e7fb7f262faabc1520237bf8dfeea47dd02211642fac75c5257a24d5bc3f",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250108T111455.nwb",
+      "session_group": "S1",
+      "sha256": "052423d5963899ebfc669d56ada6bc7ab4c060f023616a870c804c1b24f1418e",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250113T120811.nwb",
+      "session_group": "S2",
+      "sha256": "8fcaf8bf0030556ccccd1ff8133b45728409b4972ab8fcf0f554b9ad8befc41e",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250113T121303.nwb",
+      "session_group": "S2",
+      "sha256": "8842d94cda42a92e71fb6d611cb97534263887441458086261110f9c3f363b5a",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250115T110633.nwb",
+      "session_group": "S3",
+      "sha256": "d4616e5bca7d1b4581bfca0796e7a6b2c0fc1d2f2b0f1b24171d63818922fec7",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250115T111328.nwb",
+      "session_group": "S3",
+      "sha256": "dd320a6352e312cdbd89eed3a0a8f0729b49c5c6f24101fd00d3fc334d91671c",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250119T113543.nwb",
+      "session_group": "S4",
+      "sha256": "5c5ce0f17fdacfb89d0361eec46bc00ef8472fb8bd1018a124fe28ae8ab8fb54",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250119T114045.nwb",
+      "session_group": "S4",
+      "sha256": "da99134321f3fbd0702791cc76deb46e468260fa24568bc297fb7ba7b7c7ee2e",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250120T115044.nwb",
+      "session_group": "S5",
+      "sha256": "9b4420f19793bcbe8ed2bb242e1fdc55e223dc20ad6c8c5ed49a4a61fbb11dc4",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-in-minival/sub-HumanPitt-held-in-minival_ses-19250120T115537.nwb",
+      "session_group": "S5",
+      "sha256": "666047a942c82919bbb6b7bb6dda6c7222091c2051cbe12213b1a493610ae179",
+      "split": "held-in-minival"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250126T113454.nwb",
+      "session_group": "S6",
+      "sha256": "6fcdb0441ee732bf0b7ac633312b8feac426e5d461218b30b99ac8de6477d553",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250126T114029.nwb",
+      "session_group": "S6",
+      "sha256": "82a75e51605598fbb81997c2f0c2847ee22c0b578c8a4029401bbc02422e5946",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250127T120333.nwb",
+      "session_group": "S7",
+      "sha256": "c0f2c2bf9589ef138e3cb5aa96b123d7146db6ab994d9a228f17824a9a900068",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250127T120826.nwb",
+      "session_group": "S7",
+      "sha256": "e6f5c4763776eca2a8a807cbfa45219e1492915151d54f531cc13d1884ceff92",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250129T112555.nwb",
+      "session_group": "S8",
+      "sha256": "e8b7c769b6b5296273cece03b1a2ad57d1ff166f5b9875acce46345912838109",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250129T113059.nwb",
+      "session_group": "S8",
+      "sha256": "f8eb0cdcd5105448411028b348de89c899e9598898667161356a5fd3103600a5",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250202T113958.nwb",
+      "session_group": "S9",
+      "sha256": "eb76704aa5828f91e500879e912b4a22f65ec80a1a1fa6eea2ab0af0260f9560",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250202T114452.nwb",
+      "session_group": "S9",
+      "sha256": "07aec96a8acdb6e9c89e724f9a9ed7ffb9fafec4bc8d331be59dc7770e6c27b0",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250203T113515.nwb",
+      "session_group": "S10",
+      "sha256": "354813371b8d6d8ea933a15895570646c62406ee31e705a881b57758da0d2d51",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250203T114018.nwb",
+      "session_group": "S10",
+      "sha256": "745d0b9ec3487f6f68d85e826215574cf7f133314c54e3a7485e0022492fd4ef",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250206T112219.nwb",
+      "session_group": "S11",
+      "sha256": "ab254456922d99b54237f9634c1985e8f59900f94befc6c8f31f426cbba9e3ea",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250206T112712.nwb",
+      "session_group": "S11",
+      "sha256": "94b2341973c2bdfacdd8e791883ceb0914600ccb4d7e280758a358072b4018ef",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250209T111826.nwb",
+      "session_group": "S12",
+      "sha256": "301d6bd105c3e86f25d95557693dd38bbb39a8341e358087cdcfb4d3342eb761",
+      "split": "held-out-calib"
+    },
+    {
+      "dandi_asset_path": "sub-HumanPitt-held-out-calib/sub-HumanPitt-held-out-calib_ses-19250209T112327.nwb",
+      "session_group": "S12",
+      "sha256": "48acb759e00a07615b4a7929d58637e625af6b5cefd423a7f6be5e179d4ac937",
+      "split": "held-out-calib"
+    }
+  ],
+  "cache_command": "python run.py --stage all (hash-checks and creates missing local NPZ caches first)",
+  "dandiset": "DANDI:000954",
+  "download_command": "python download_h1_data.py --output-dir \"$FALCON_H1_DATA\"",
+  "local_data_root": "$FALCON_H1_DATA",
+  "notes": [
+    "Asset paths and SHA256 values are sourced from hdc_study/provenance/data_manifest.json.",
+    "The downloader rejects current DANDI files whose bytes differ from the frozen manifest.",
+    "FALCON_H1_DATA is an external local directory; no NWB or NPZ cache is distributed."
+  ],
+  "raw_data_in_package": false,
+  "scope": "Only source files enumerated here from FALCON H1 Dandiset 000954",
+  "status": "complete"
+}

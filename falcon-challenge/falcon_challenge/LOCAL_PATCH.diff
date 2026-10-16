@@ -1,0 +1,22 @@
+diff --git a/falcon-challenge/falcon_challenge/dataloaders.py b/falcon-challenge/falcon_challenge/dataloaders.py
+index a413d78..aa5dd51 100644
+--- a/falcon-challenge/falcon_challenge/dataloaders.py
++++ b/falcon-challenge/falcon_challenge/dataloaders.py
+@@ -88,6 +88,17 @@ def load_nwb(fn: Union[str, Path], dataset: FalconTask = FalconTask.h1, bin_old=
+     """
+     if not dataset in [FalconTask.h1, FalconTask.h2, FalconTask.m1, FalconTask.m2, FalconTask.b1]:
+         raise ValueError(f"Unknown dataset {dataset}")
++    fn = Path(fn)
++    try:
++        from physionet.physio import is_vr_pilot_path, load_vr_pilot
++    except Exception:
++        is_vr_pilot_path = None
++        load_vr_pilot = None
++
++    if is_vr_pilot_path is not None and load_vr_pilot is not None:
++        if is_vr_pilot_path(fn):
++            return load_vr_pilot(fn, dataset)
++
+     with NWBHDF5IO(str(fn), 'r') as io:
+         nwbfile = io.read()
+         if dataset == FalconTask.h1:

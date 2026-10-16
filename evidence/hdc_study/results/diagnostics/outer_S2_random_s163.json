@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "id": "outer_S2_random_s163",
+  "day": "S2",
+  "family": "random",
+  "seed": 163,
+  "protocol_sha256": "6862e05b0cbc1c8bdd63a5689d3e8449ae5302e6c20963e599381e4604e29f48",
+  "checkpoint_sha256": "8d1272b4f92563a9a85693bd21a37da2e63ad3c7e0902b2aeaee82e3ea1567fe",
+  "perturb_seed": 700163,
+  "calibration": [
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "prefix_seconds": 0,
+      "r2": 0.3271305561065674
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "prefix_seconds": 15,
+      "r2": 0.3141252100467682
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "prefix_seconds": 30,
+      "r2": 0.3103012144565582
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "prefix_seconds": 60,
+      "r2": 0.3167485296726227
+    }
+  ],
+  "robustness": [
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "perturbation": "gain",
+      "level": 0.0,
+      "r2": 0.3271305561065674
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "perturbation": "dropout",
+      "level": 0.0,
+      "r2": 0.3271305561065674
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "perturbation": "gain",
+      "level": 0.1,
+      "r2": 0.3224279582500458
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "perturbation": "gain",
+      "level": 0.2,
+      "r2": 0.31018152832984924
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "perturbation": "gain",
+      "level": 0.4,
+      "r2": 0.2687539756298065
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "perturbation": "dropout",
+      "level": 0.1,
+      "r2": 0.28151121735572815
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "perturbation": "dropout",
+      "level": 0.2,
+      "r2": 0.2506997287273407
+    },
+    {
+      "day": "S2",
+      "family": "random",
+      "seed": 163,
+      "perturbation": "dropout",
+      "level": 0.4,
+      "r2": 0.126350536942482
+    }
+  ]
+}

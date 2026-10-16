@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "id": "outer_S4_hdc_s139",
+  "day": "S4",
+  "family": "hdc",
+  "seed": 139,
+  "protocol_sha256": "6862e05b0cbc1c8bdd63a5689d3e8449ae5302e6c20963e599381e4604e29f48",
+  "checkpoint_sha256": "4f8f89f41f6689f38038cc561e08bc98df32281528873b5dac4514982e4d6054",
+  "perturb_seed": 700139,
+  "calibration": [
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "prefix_seconds": 0,
+      "r2": 0.46226122975349426
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "prefix_seconds": 15,
+      "r2": 0.43894708156585693
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "prefix_seconds": 30,
+      "r2": 0.43716031312942505
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "prefix_seconds": 60,
+      "r2": 0.4491284489631653
+    }
+  ],
+  "robustness": [
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "perturbation": "gain",
+      "level": 0.0,
+      "r2": 0.46226122975349426
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "perturbation": "dropout",
+      "level": 0.0,
+      "r2": 0.46226122975349426
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "perturbation": "gain",
+      "level": 0.1,
+      "r2": 0.4644053280353546
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "perturbation": "gain",
+      "level": 0.2,
+      "r2": 0.46343129873275757
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "perturbation": "gain",
+      "level": 0.4,
+      "r2": 0.4512597322463989
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "perturbation": "dropout",
+      "level": 0.1,
+      "r2": 0.38399168848991394
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "perturbation": "dropout",
+      "level": 0.2,
+      "r2": 0.30487021803855896
+    },
+    {
+      "day": "S4",
+      "family": "hdc",
+      "seed": 139,
+      "perturbation": "dropout",
+      "level": 0.4,
+      "r2": 0.25782716274261475
+    }
+  ]
+}
